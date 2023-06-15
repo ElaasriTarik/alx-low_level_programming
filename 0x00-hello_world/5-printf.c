@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
 * printf retun "With proper..."
-* function main prints the value "with proper grammar, ..." followed bynew line
+* function main prints "with proper grammar, but the outcome
+* is a piece of art," followed by a new line
 * Always return : 0
 **/
 int main(void)
