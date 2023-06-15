@@ -1,9 +1,8 @@
 #include <stdio.h>
 /**
-* printf retun "With proper..."
-* function main prints "with proper grammar, but the outcome
-* is a piece of art," followed by a new line
-* Always return : 0
+ * main - Entry point
+ *
+ * Return:0 
 */
 int main(void)
 {
