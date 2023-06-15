@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
 * main - Prints "programming... 
 *Return: Always 0 (Success)
