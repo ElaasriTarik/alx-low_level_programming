@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* main - Prints "programming... 
+* main - Prints "programming..."
 * Return: Always 0 (Success)
 */
 int main(void)
