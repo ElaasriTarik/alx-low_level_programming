@@ -6,8 +6,8 @@
 */
 int main(void)
 {
-int n = 0;
-while (n < 10)
+int b = 0;
+while (b < 10)
 {
 printf("%d\n", b);
 b++
