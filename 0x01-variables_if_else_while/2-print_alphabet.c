@@ -5,11 +5,10 @@
 * Return: Always 0 (Success)
 */
 int main() {
-char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-for (int i = 0; i < 26; i++) {
-char low = tolower(alphabet[i]);
-putchar(low);
+char alpha = 'a';
+for (alpha; alpha <= 'z'; alpha++) {
+putchar(alpha);
 }
-putchar("\n");
+putchar('\n');
 return (0);
 }
