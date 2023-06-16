@@ -4,9 +4,11 @@
 * followed by a new line
 * Return: Always 0 (Success)
 */
-int main() {
+int main(void)
+{
 char alpha = 'a';
-for(; alpha <= 'z'; alpha++) {
+for (; alpha <= 'z'; alpha++)
+{
 putchar(alpha);
 }
 putchar('\n');
