@@ -6,7 +6,7 @@
 */
 int main() {
 char alpha = 'a';
-for (alpha; alpha <= 'z'; alpha++) {
+for(; alpha <= 'z'; alpha++) {
 putchar(alpha);
 }
 putchar('\n');
