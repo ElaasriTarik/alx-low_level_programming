@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-char b = 0;
+int b = 0;
 while (b < 10)
 {
 putchar(b);
