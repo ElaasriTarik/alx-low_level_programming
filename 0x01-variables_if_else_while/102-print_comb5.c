@@ -5,28 +5,22 @@
  */
 int main(void)
 {
-int a, b, c, d;
-for (a = 0; a <= 9; a++)
+int a, b;
+for (a = 0; a <= 99; a++)
 {
-for (b = 0; b <= 9; b++)
+for (b = a; b <= 99; b++)
 {
-for (c = 0; c <= 9; c++)
+if (b != a)
 {
-for (d = 0; d <= 9; d++)
-{
-if (c != d && b != d)
-{
-putchar(a + '0');
-putchar(b + '0');
-putchar(32);
-putchar(c + '0');
-putchar(d + '0');
-if (a + b + c + d < 35)
+putchar(a / 10 + 48);
+putchar(a % 10 + 48);
+putchar(' ');
+putchar(b / 10 + 48);
+putchar(b % 10 + 48);
+if (a * 100 + b != 9899)
 {
 putchar(',');
 putchar(' ');
-}
-}
 }
 }
 }
