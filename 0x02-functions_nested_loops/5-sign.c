@@ -7,17 +7,17 @@ int print_sign(int r)
 {
 if (r > 0)
 {
-printf("+");
+printf("+, %d", r);
 return (1);
 }
 else if (r < 0)
 {
-printf("-");
+printf("-, %d", r);
 return (-1);
 }
 else
 {
-printf("0");
+printf("0, %d", r);
 return (0);
 }
 }
