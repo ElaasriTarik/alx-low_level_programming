@@ -1,23 +1,25 @@
 #include "main.h"
 /**
  * print_sign - prints sign of a number, fllowd by a new lines
- * Void: No retuen
+ *@n: number being tested
+ * Return: Always (0)
  */
-int print_sign(int r)
+int print_sign(int n)
 {
-if (r > 0)
+if (n > 0)
 {
-printf("+, %d", r);
+_putchar('+');
 return (1);
 }
-else if (r < 0)
+else if (n == 0)
 {
-printf("-, %d", r);
-return (-1);
-}
-else
-{
-printf("0, %d", r);
+_putchar('0');
 return (0);
 }
+else if (n < 0)
+{
+_putchar('-');
+return (-1);
+}
+return (0);
 }
