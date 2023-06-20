@@ -1,11 +1,11 @@
 #include "main.h"
 /**
  * main - prints alphabets, fllowd by a new linees
- * Return: Alwys 0 (Success)
+ * Void: No retuen 
  */
 void print_alphabet(void)
 {
-  char a = 'a';
+char a = 'a';
 for (; a < 'z'; a++)
 {
 _putchar(a);
