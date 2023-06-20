@@ -3,7 +3,7 @@
  * main - prints alphabets, fllowd by a new linees
  * Return: Alwys 0 (Success)
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
   char a = 'a';
 for (; a < 'z'; a++)
