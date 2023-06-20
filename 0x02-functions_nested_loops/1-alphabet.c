@@ -3,11 +3,12 @@
  * main - prints alphabets, fllowd by a new linees
  * Return: Alwys 0 (Success)
  */
-int main(void)
+int print_alphabet(void)
 {
-for (int x = 'a'; x < 'z'; x++)
+  char a = 'a';
+for (; a < 'z'; a++)
 {
-_putchar(print_alphabet(x));
+_putchar(a);
 }
 _putchar('\n');
 return (0);
