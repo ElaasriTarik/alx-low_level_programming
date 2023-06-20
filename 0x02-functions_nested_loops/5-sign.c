@@ -12,12 +12,12 @@ return (1);
 }
 else if (r < 0)
 {
-printf("0");
-return (0);
+printf("-");
+return (-1);
 }
 else
 {
-printf("-");
+printf("0");
 return (0);
 }
 }
