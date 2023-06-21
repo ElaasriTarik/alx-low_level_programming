@@ -4,7 +4,7 @@
  * main - Prints even valued term numbers, starting with 1 and 2,
  * Return: Always (0).
  */
-int main()
+void main()
 {
 int i=1,j=1,sum=0;
 while(i<4000000)
