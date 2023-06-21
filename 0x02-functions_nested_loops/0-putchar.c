@@ -1,11 +1,22 @@
 #include "main.h"
 /**
-* main - program that prints _putchar
-* followed by a new line
-* Return: Always 0 (Success)
+ * times_table - print all 9 times tables
+ * return Void.
 */
-int main(void)
+void times_table(void)
 {
-printf("_putchar\n");
-return (0);
+int s = 1;
+while (s <= 9)
+{
+int x = s;
+int c = 1;
+while (c <= 9)
+{
+_putchar(x + "0");
+_putchar(", ");
+x += x;
+c++;
+}
+s++;
+}
 }
