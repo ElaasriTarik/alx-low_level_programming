@@ -3,7 +3,7 @@
  * print_times_table - print the n table begin with 0
  * @n: number of the times table
  */
-void print_times_table(int n)
+void print_time_table(int n)
 {
 int i, y, z;
 if (n >= 0 && n <= 15)
