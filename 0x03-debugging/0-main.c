@@ -1,8 +1,11 @@
 #include "main.h"
+
 /**
 * main - this main function tests for positive or negative
+* return the value of the function positive_or_negative()
 * Return: Always (0)
 */
+
 int main(void)
 {
 int i;
