@@ -5,18 +5,31 @@
 */
 void times_table(void)
 {
-int s = 1;
-while (s <= 9)
+int x, y, z;
+for (x = 0; x < 10; x++)
 {
-int x = s;
-int c = 1;
-while (c <= 9)
+for (y = 0; y < 10; y++)
 {
-_putchar(x + "0");
-_putchar(", " + "0");
-x += x;
-c++;
+z = y * x;
+if (y == 0)
+{
+_putchar(z + '0');
 }
-s++;
+if (z < 10 && y != 0)
+{
+_putchar(',');
+_putchar(' ');
+_putchar(' ');
+_putchar(z + '0');
+}
+else if (z >= 10)
+{
+_putchar(',');
+_putchar(' ');
+_putchar((z / 10) + '0');
+_putchar((z % 10) + '0');
+}
+}
+_putchar('\n');
 }
 }
