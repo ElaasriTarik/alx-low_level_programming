@@ -1,18 +1,25 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
- * main - Prints even valued term numbers, starting with 1 and 2,
- * Return: Always (0).
+ * main - finds and prints sum of the even value terms
+ * Return: Always 0 (Success)
  */
-void main(void)
+int main(void)
 {
-int i=1,j=1,sum=0;
-while(i<4000000)
+int i;
+unsigned long int x, y, forward, theSum;
+x = 1;
+y = 2;
+theSum = 0;
+for (i = 1; i <= 33; ++i)
 {
-i=i+j;
-j=i-j;
-if(i%2==0)
-sum+=i;
+if ((x % 2) == 0 && x < 4000000)
+{
+theSum = theSum + x;
 }
-printf("Sum is: %d",sum);
+forward = x + y;
+x = y;
+y = forward;
+}
+printf("%lu\n", theSum);
+return (0);
 }
