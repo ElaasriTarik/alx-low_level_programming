@@ -3,7 +3,7 @@
  * times_table - print all 9 times tables
  * return Void.
 */
-void times_table(void)
+void time_table(void)
 {
 int x, y, z;
 for (x = 0; x < 10; x++)
