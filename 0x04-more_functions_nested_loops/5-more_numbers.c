@@ -16,10 +16,13 @@ y = 0;
 for (; y <= 14; y++)
 {
 if (y >= 10)
+{
 _putchar(y / 10 + '0');
+}
 else
+{
 _putchar(y % 10 + '0');
-
+}
 }
 _putchar('\n');
 }
