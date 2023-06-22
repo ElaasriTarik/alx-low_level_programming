@@ -2,15 +2,13 @@
 #include <stdio.h>
 
 /**
- * print_numbers - print numbers from 0 through 9.
- * Return: Always void.
+ * mul - multiplies a and b.
+ * @a: to multiply with b
+ * @b: to multiply with a
+ * Return: Always 0.
  */
-int print_numbers(void)
+int mul(int a, int b)
 {
-int a = 0;
-for (; a <= 9; a++)
-{
-_putchar(48 + a);
-}
-_putchar('\n');
+int multi = a * b;
+return (multi);
 }
