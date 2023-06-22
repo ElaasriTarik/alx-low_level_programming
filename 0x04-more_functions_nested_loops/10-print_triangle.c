@@ -16,7 +16,7 @@ else
 int x; 
 int y;
 for (x = 1; x <= size; x++)
-		{
+{
 y = x;
 while (y < size)
 {
