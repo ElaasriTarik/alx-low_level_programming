@@ -10,7 +10,7 @@ void main(int n)
 {
 int n;
 int space;
-for (n = 0; n < n; n++)
+for (int x = 0; x < n; x++)
 {
 for (space = 0; space < n; space++)
 {
