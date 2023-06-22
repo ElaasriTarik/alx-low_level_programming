@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _isupper - Check if d is digit.
+ * _isdigit - Checks if d is a digit.
  * @d: a character
  * Return: Always 0.
  */
