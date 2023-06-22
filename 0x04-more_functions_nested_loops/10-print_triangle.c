@@ -13,7 +13,7 @@ _putchar('\n');
 }
 else
 {
-int x; 
+int x;
 int y;
 for (x = 1; x <= size; x++)
 {
