@@ -6,7 +6,7 @@
  * @n : The number of '\' characters to use
  * Return: Void.
  */
-void main(int n)
+void print_diagonal(int n)
 {
 int space;
 for (int x = 0; x < n; x++)
