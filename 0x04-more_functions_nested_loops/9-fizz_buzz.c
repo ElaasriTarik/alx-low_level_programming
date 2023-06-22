@@ -4,7 +4,7 @@
 /**
  * main- Print Fizz for multiple of 3, Buzz for multiple of 5.
  * FizzBuzz for both
- * Return: Void.
+ * Return: Always 0
  */
 int main(void)
 {
