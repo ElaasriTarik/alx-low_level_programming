@@ -6,7 +6,7 @@
  * @d: a character
  * Return: Always 0.
  */
-int _isupper(int d)
+int _isdigit(int d)
 {
 if (d >= 48 && d <= 57)
 return (1);
