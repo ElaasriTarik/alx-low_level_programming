@@ -6,16 +6,18 @@
  * @n : The number of '\' characters to use
  * Return: Void.
  */
-void print_diagonal(int n)
+void main(int n)
 {
 int n;
-int space = '';
+int space;
 for (n = 0; n < n; n++)
 {
-space += ' ';
-_putchar(space);
-_putchar('\'');
-_putchar('\n');
+for (space = 0; space < n; space++)
+{
+putchar(' ');
 }
-_putchar('\n');
+putchar('\\');
+putchar('\n');
+}
+putchar('\n');
 }
