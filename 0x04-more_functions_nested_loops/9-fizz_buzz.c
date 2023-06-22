@@ -26,10 +26,9 @@ val = "Buzz";
 else
 {
 _putchar(x + '0');
-_putchar(' ');
 }
 putchar(val);
-
+_putchar(' ');
 }
 _putchar('\n');
 }
