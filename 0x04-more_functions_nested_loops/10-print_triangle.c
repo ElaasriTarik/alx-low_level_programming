@@ -21,7 +21,7 @@ y = x;
 while (y < size)
 {
 _putchar(' ');
-y++
+y++;
 }
 y = 1;
 while (y <= x)

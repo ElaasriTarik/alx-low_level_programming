@@ -10,6 +10,6 @@ extern void more_numbers(void);
 extern void print_line(int);
 extern void print_diagonal(int);
 extern void print_square(int);
-extern void print_triangle(int size);
+extern void print_triangle(int);
 extern void print_number(int);
 #endif
