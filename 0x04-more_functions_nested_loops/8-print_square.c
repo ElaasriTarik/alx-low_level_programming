@@ -19,7 +19,7 @@ else
 for (x = 0; x < size; x++)
 {
 sp = 0;
-while (sp < 10)
+while (sp < size)
 {
 _putchar('#');
 sp++;
