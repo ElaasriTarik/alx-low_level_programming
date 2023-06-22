@@ -8,27 +8,26 @@
 int main(void)
 {
 int x;
-char val[9] = "";
-for (x = 1; x < 100; x++)
+for (x = 1; x <= 100; x++)
 {
-if (x % 15 == 0)
+if (x % 15 ==  0)
 {
-val = "FizzBuzz";
+printf("%s", "FizzBuzz");
 }
 else if (x % 3 == 0)
 {
-val = "Fizz";
+printf("%s", "Fizz");
 }
 else if (x % 5 == 0)
 {
-val = "Buzz";
+printf("%s", "Buzz");
 }
 else
 {
-putchar(x + '0');
+printf("%d", x);
 }
-putchar(val);
-putchar(' ');
+if (x != 100)
+{
+printf(" ");
 }
-putchar('\n');
 }
