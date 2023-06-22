@@ -3,10 +3,20 @@
 
 /**
  * print_number - Print a number int .
- * @n : The number of '\' characters to use
+ * @n : as an integer
  * Return: Void.
  */
 void print_number(int n)
 {
-_putchar(n + '0');
+unsigned unt b = 0;
+if (n < 0)
+b = -n;
+_putchar('-');
+else
+b = n;
+if (b / 10)
+{
+print_number(n1 / 10);
+}
+_putchar((b % 10)+ '0');
 }
