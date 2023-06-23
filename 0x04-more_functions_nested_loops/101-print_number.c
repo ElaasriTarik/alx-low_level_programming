@@ -20,7 +20,7 @@ b = n;
 }
 if (b / 10)
 {
-print_number(n1 / 10);
+print_number(b / 10);
 }
-_putchar((b % 10)+ '0');
+_putchar((b % 10) + '0');
 }
