@@ -13,8 +13,7 @@ int x = 0;
 do {
 dest[x] = src[x];
 x++;
-}
-while (src[x] != '\0');
+}while (src[x] != '\0');
 dest[x] = '\0';
 
 return (dest);
