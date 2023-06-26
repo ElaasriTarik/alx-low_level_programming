@@ -12,9 +12,11 @@ int i = 0;
 int x = 0;
 while (s[i] != '\0')
 {
+    printf("%c", s[i]);
 x++;
 i++;
 }
+printf("\n");
 x--;
 while (x >= 0)
 {
@@ -26,7 +28,7 @@ printf("%c", '\n');
 
 int main(void)
 {
-    char *c = "my school!";
+    char *c = "Holberton!";
     print_rev(c);
     return (0);
 }
