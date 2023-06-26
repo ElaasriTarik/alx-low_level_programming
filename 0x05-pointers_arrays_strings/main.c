@@ -15,7 +15,7 @@ while (s[x] != '\0')
 x++;
 }
 x--;
-while (i < x)
+while (i <= x)
 {
 printf("%c", s[i]);
 i += 2;
@@ -26,7 +26,7 @@ printf("\n");
 
 int main(void)
 {
-    char *s = "12345";
+    char *s = "0123456789";
     print_rev(s);
     return (0);
 }
