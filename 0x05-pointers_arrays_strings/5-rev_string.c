@@ -5,22 +5,22 @@
  * @s: the string to be printed in reverse
  * Return: Success;
 */
-void rev_string(char *s)
+void print_rev(char *s)
 {
-int i = 0;
-int x = 0;
+int ll, i, tt;
+
+ll = 0;
+i = 0;
 while (s[i] != '\0')
 {
-_putchar(s[i]);
-x++;
 i++;
 }
-_putchar('\n');
-x--;
-while (x >= 0)
+i--;
+while (i > ll)
 {
-_putchar(s[x]);
-x--;
+tt = s[i];
+s[i--] = s[ll];
+s[ll++] = tt;
 }
-_putchar('\n');
+
 }

@@ -8,27 +8,43 @@
  */
 void print_rev(char *s)
 {
+int v, t;
+char f;
 int i = 0;
 int x = 0;
-while (s[i] != '\0')
+while (s[x] != '\0')
 {
-    printf("%c", s[i]);
 x++;
-i++;
 }
-printf("\n");
 x--;
-while (x >= 0)
+char arr[x];
+v = x;
+while (x >= 0 && i <= v)
 {
-printf("%c", s[x]);
-x--;
+ arr[i] = s[x];
+ //printf("%c", arr[i]);
+ i++;
+ x--;
 }
-printf("%c", '\n');
+i = v;
+t = 0;
+while (t <= i)
+{
+printf("%d\n", t);
+f = arr[t];
+printf("%c\n", f);
+s[t] = f;
+printf("the S:%c\n", s);
+t++;
+}
+
 }
 
 int main(void)
 {
-    char *c = "Holberton!";
-    print_rev(c);
+    char *s = "Holberton!";
+    printf("%s\n", s);
+    print_rev(s);
+    printf("%s", s);
     return (0);
 }
