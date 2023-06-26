@@ -6,19 +6,26 @@
  *
  * Return: Always 0.
  */
-void _puts(char *str)
+void print_rev(char *s)
 {
 int i = 0;
-while (str[i] != '\0')
+int x = 0;
+while (s[i] != '\0')
 {
-printf("%c", str[i]);
+x++;
 i++;
+}
+while (x >= 0)
+{
+printf("%c", s[x]);
+x--;
 }
 printf("\n");
 }
+
 int main(void)
 {
     char *c = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    _puts(c);
+    print_rev(c);
     return (0);
 }
