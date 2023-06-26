@@ -8,8 +8,6 @@
  */
 void print_rev(char *s)
 {
-int v, t;
-char f;
 int i = 0;
 int x = 0;
 while (s[x] != '\0')
@@ -17,34 +15,18 @@ while (s[x] != '\0')
 x++;
 }
 x--;
-char arr[x];
-v = x;
-while (x >= 0 && i <= v)
+while (i < x)
 {
- arr[i] = s[x];
- //printf("%c", arr[i]);
- i++;
- x--;
+printf("%c", s[i]);
+i += 2;
 }
-i = v;
-t = 0;
-while (t <= i)
-{
-printf("%d\n", t);
-f = arr[t];
-printf("%c\n", f);
-s[t] = f;
-printf("the S:%c\n", s);
-t++;
-}
+printf("\n");
 
 }
 
 int main(void)
 {
-    char *s = "Holberton!";
-    printf("%s\n", s);
+    char *s = "12345";
     print_rev(s);
-    printf("%s", s);
     return (0);
 }
