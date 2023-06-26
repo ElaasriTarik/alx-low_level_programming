@@ -16,8 +16,8 @@ i++;
 }
 while (x >= 0)
 {
-printf("%c", s[x]);
+_putchar(s[x]);
 x--;
 }
-printf("\n");
+_putchar('\n');
 }

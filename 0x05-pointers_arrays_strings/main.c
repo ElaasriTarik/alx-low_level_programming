@@ -17,15 +17,15 @@ i++;
 }
 while (x >= 0)
 {
-printf("%c", s[x]);
+_putchar(s[x]);
 x--;
 }
-printf("\n");
+_putchar('\n');
 }
 
 int main(void)
 {
-    char *c = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    char *c = "Holberton!";
     print_rev(c);
     return (0);
 }
