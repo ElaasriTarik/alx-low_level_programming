@@ -9,11 +9,11 @@
 int _strlen(char *n)
 {
 int x = 0;
-for (int i = 0; i < 1000; i++)
+int i = 0;
+while (n[i] != '\0')
 {
-    if(n[i] == '\0') 
-    break;
-    x++;
+x++;
+i++;
 }
 return (x);
 }

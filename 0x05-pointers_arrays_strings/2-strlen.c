@@ -9,10 +9,8 @@ int _strlen(char *n)
 {
 int x = 0;
 int i = 0;
-while (i < 100)
+while (n[i] != '\0')
 {
-if(n[i] == '\0')
-break;
 x++;
 i++;
 }
