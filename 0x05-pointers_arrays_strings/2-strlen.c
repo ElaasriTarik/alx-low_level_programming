@@ -8,11 +8,13 @@
 int _strlen(char *n)
 {
 int x = 0;
-for (int i = 0; i < 1000; i++)
+int i = 0;
+while (i < 100)
 {
 if(n[i] == '\0')
 break;
 x++;
+i++;
 }
 return (x);
 }
