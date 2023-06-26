@@ -5,7 +5,7 @@
  * @str: the string to be printed
  * Return: Success;
 */
-void _puts2(char *str)
+void puts2(char *str)
 {
 int i = 0;
 int x = 0;
