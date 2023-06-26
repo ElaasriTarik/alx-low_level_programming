@@ -15,17 +15,18 @@ while (s[i] != '\0')
 x++;
 i++;
 }
+x--;
 while (x >= 0)
 {
-_putchar(s[x]);
+printf("%c", s[x]);
 x--;
 }
-_putchar('\n');
+printf("%c", '\n');
 }
 
 int main(void)
 {
-    char *c = "Holberton!";
+    char *c = "my school!";
     print_rev(c);
     return (0);
 }
