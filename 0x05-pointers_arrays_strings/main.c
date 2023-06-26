@@ -6,21 +6,19 @@
  *
  * Return: Always 0.
  */
-int _strlen(char *n)
+void _puts(char *str)
 {
-int x = 0;
 int i = 0;
-while (n[i] != '\0')
+while (str[i] != '\0')
 {
-x++;
+printf("%c", str[i]);
 i++;
 }
-return (x);
+printf("\n");
 }
 int main(void)
 {
-    char *c = "My first strlen!";
-    int size = _strlen(c);
-    printf("size: %d\n", size);
+    char *c = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    _puts(c);
     return (0);
 }
