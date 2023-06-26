@@ -6,7 +6,7 @@
  * @dest: the variable to copy into
  * Return: Success;
 */
-void *_strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 int x = 0;
 do
