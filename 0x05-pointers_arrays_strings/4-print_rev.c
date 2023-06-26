@@ -14,7 +14,6 @@ while (s[i] != '\0')
 x++;
 i++;
 }
-int l = 0;
 while (x >= 0)
 {
 printf("%c", s[x]);
