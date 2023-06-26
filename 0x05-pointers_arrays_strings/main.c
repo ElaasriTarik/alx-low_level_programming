@@ -6,35 +6,32 @@
  *
  * Return: Always 0.
  */
-void print_rev(char *str)
+void print_array(int *a, int n)
 {
-int n;
 int x = 0;
-while (str[x] != '\0')
+
+for (; x < n;)
 {
+printf("%d", a[x]);
 x++;
-}
-if(x % 2 == 1)
+if (x < n)
 {
-n = (x - 1) / 2;
+printf(", ");
 }
-else
-{
-n = x / 2;
 }
-for (int i = n; i < x; i++)
-{
-printf("%c", str[i]);
-}
-
-
 printf("\n");
 
 }
 
 int main(void)
 {
-    char *s = "0123456789";
-    print_rev(s);
+    int array[5];
+
+    array[0] = 98;
+    array[1] = 402;
+    array[2] = -198;
+    array[3] = 298;
+    array[4] = -1024;
+    print_array(array, 5);
     return (0);
 }
