@@ -4,7 +4,7 @@
  * _strcpy - copies src into dest
  * @src: the variable to be copied
  * @dest: the variable to copy into
- * Return: Success;
+ * Return value: the pointer to dest
 */
 char *_strcpy(char *dest, char *src)
 {
@@ -18,4 +18,5 @@ x++;
 dest[x] = '\0';
 printf("\n");
 
+return (dest);
 }
