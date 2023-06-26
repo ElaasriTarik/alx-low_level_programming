@@ -14,7 +14,7 @@ while (str[x] != '\0')
 {
 x++;
 }
-if(x % 2 == 1)
+if (x % 2 == 1)
 {
 n = (x - 1) / 2;
 }
@@ -22,7 +22,7 @@ else
 {
 n = x / 2;
 }
-i = n;
+i = n + 1;
 for (; i < x; i++)
 {
 printf("%c", str[i]);
