@@ -8,6 +8,7 @@
 void puts_halp(char *str)
 {
 int n;
+int i;
 int x = 0;
 while (str[x] != '\0')
 {
@@ -21,7 +22,7 @@ else
 {
 n = x / 2;
 }
-int i = n;
+i = n;
 for (; i < x; i++)
 {
 printf("%c", str[i]);
