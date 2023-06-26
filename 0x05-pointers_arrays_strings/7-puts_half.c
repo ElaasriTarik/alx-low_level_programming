@@ -1,12 +1,11 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
-void print_rev(char *str)
+ * puts_half- prints only the last half of a string
+ * @str: the string to be printed
+ * Return: Success;
+*/
+void puts_halp(char *str)
 {
 int n;
 int x = 0;
@@ -29,12 +28,4 @@ printf("%c", str[i]);
 
 
 printf("\n");
-
-}
-
-int main(void)
-{
-    char *s = "0123456789";
-    print_rev(s);
-    return (0);
 }
