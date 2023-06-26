@@ -6,20 +6,15 @@
  *
  * Return: Always 0.
  */
-void swap_int(int *a, int *b)
+int _strlen(char *n)
 {
-*a = *b;
-*b = a;
+int size = (sizeof(n));
+return (size);
 }
 int main(void)
 {
-    int a;
-    int b;
-
-    a = 98;
-    b = 42;
-    printf("a=%d, b=%d\n", a, b);
-    swap_int(&a, &b);
-    printf("a=%d, b=%d\n", a, b);
+    char *c = "school";
+    int size = _strlen(c);
+    printf("size: %d\n", size);
     return (0);
 }
