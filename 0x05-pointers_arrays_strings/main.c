@@ -8,12 +8,18 @@
  */
 int _strlen(char *n)
 {
-int size = (sizeof(n));
-return (size);
+int x = 0;
+for (int i = 0; i < 1000; i++)
+{
+    if(n[i] == '\0') 
+    break;
+    x++;
+}
+return (x);
 }
 int main(void)
 {
-    char *c = "school";
+    char *c = "My first strlen!";
     int size = _strlen(c);
     printf("size: %d\n", size);
     return (0);
