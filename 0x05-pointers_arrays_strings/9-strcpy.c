@@ -12,11 +12,9 @@ int x = 0;
 do
 {
 dest[x] = src[x];
-printf("%c", dest[x]);
 x++;
 } while (src[x] != '\0');
 dest[x] = '\0';
-printf("\n");
 
 return (dest);
 }
