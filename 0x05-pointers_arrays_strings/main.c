@@ -6,32 +6,28 @@
  *
  * Return: Always 0.
  */
-void print_array(int *a, int n)
+char *_strcpy(char *dest, char *src)
 {
-int x = 0;
-
-for (; x < n;)
-{
-printf("%d", a[x]);
-x++;
-if (x < n)
-{
-printf(", ");
-}
-}
-printf("\n");
+  int x = 0;
+  do
+  {
+    dest[x] = src[x];
+    printf("%c", dest[x]);
+    x++;
+  } while (src[x] != '\0');
+  dest[x] = '\0';
+  printf("\n");
+  
 
 }
 
 int main(void)
 {
-    int array[5];
+    char s1[98];
+    char *ptr;
 
-    array[0] = 98;
-    array[1] = 402;
-    array[2] = -198;
-    array[3] = 298;
-    array[4] = -1024;
-    print_array(array, 5);
+    ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
+    printf("%s", s1);
+    printf("%s", ptr);
     return (0);
 }
