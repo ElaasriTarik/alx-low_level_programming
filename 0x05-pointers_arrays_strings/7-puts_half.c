@@ -21,7 +21,8 @@ else
 {
 n = x / 2;
 }
-for (int i = n; i < x; i++)
+int i = n;
+for (; i < x; i++)
 {
 printf("%c", str[i]);
 }
