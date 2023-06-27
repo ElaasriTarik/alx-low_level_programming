@@ -22,6 +22,6 @@ while (s[x] != '\0' && !(s[x] <= 57 && s[x] >= 48))
 sum = (sum * 10) + (s[x] - '0');
 x++;
 }
-sum = sum * al;
+sum *= al;
 return (sum);
 }
