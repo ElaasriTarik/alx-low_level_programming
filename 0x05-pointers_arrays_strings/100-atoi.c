@@ -24,10 +24,7 @@ else if (s[x] >= 48 && s[x] <= 57)
 putchar(s[x]);
 }
 else
-{
-return (0);
-}
 x++;
 }
-
+retrun ('\n');
 }
