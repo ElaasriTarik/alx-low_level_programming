@@ -26,5 +26,5 @@ putchar(s[x]);
 else
 x++;
 }
-retrun ('\n');
+return ('\n');
 }
