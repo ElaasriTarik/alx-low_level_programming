@@ -6,28 +6,34 @@
  *
  * Return: Always 0.
  */
-char *_strcpy(char *dest, char *src)
+int cnv(char *s)
 {
-  int x = 0;
-  do
-  {
-    dest[x] = src[x];
-    printf("%c", dest[x]);
-    x++;
-  } while (src[x] != '\0');
-  dest[x] = '\0';
-  printf("\n");
-  
+int x = 0;
+while (s[x] != '\0')
+{
+if (s[x] == 45)
+{
+if (s[x + 1] >= 48 && s[x + 1] <= 57)
+{
+printf("negative\n");
+putchar('-');
+x++;
+putchar(s[x]);
+}
+}
+else if (s[x] >= 48 && s[x] <= 57)
+{
+putchar(s[x]);
+}
+x++;
+}
+putchar('\n');
 
 }
 
 int main(void)
 {
-    char s1[98];
-    char *ptr;
 
-    ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
-    printf("%s", s1);
-    printf("%s", ptr);
+    cnv("---++++ -++ Sui - te -   -402 #cisfun :)");
     return (0);
 }
