@@ -25,5 +25,5 @@ putchar(s[x]);
 }
 x++;
 }
-return (0);
+
 }
