@@ -7,23 +7,21 @@
 */
 int _atoi(char *s)
 {
+int al = 1;
 int x = 0;
-while (s[x] != '\0')
+unsigned int sun = 0;
+/*check the sign of the number...*/
+while (s[x] != '\0' && !(s[x] <= 57 && s[x] >= 48))
 {
 if (s[x] == 45)
-{
-if (s[x + 1] >= 48 && s[x + 1] <= 57)
-{
-return('-');
-x++;
-return(s[x]);
-}
-}
-else if (s[x] >= 48 && s[x] <= 57)
-{
-putchar(s[x]);
-}
+al *= -1;
 x++;
 }
-return ('\n');
+while (s[x] != '\0' && !(s[x] <= 57 && s[x] >= 48))
+{
+sun = (sun * 10) + (s[x] - '0');
+x++;
+}
+sun =sum * al;
+return (sun);
 }
