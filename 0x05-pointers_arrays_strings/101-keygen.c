@@ -8,7 +8,7 @@
 */
 int main () 
 {
-	int ascii = 2772, 
+	int ascii = 2772; 
     int i = 0;
     int x, ran;
 	char p[100];
