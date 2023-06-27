@@ -6,18 +6,35 @@
  * main - generates a password
  * Return: always 0 (Success)
 */
-int main () {
-int i, n;
-char pass = "Tada! Congrats";
-time_t t;
-n = 5;
-/* Intializes random number generator */
-srand((unsigned) time(&t));
-while (pass[i] != '\0')
+int main () 
 {
-_putchar(pass[i])
-i++;
-}
+	int ascii = 2772, 
+    int i = 0;
+    int x, ran;
+	char p[100];
+	time_t t;
+   
+   /* Intializes random number generator */
+	srand((int) time(&t));
 
-return(0);
+	while (ascii > 126)
+	{
+		ran = rand() % 126;
+		p[i] = ran;
+		ascii -= ran;
+		i++;
+	}
+	if (0 < ascii)
+		p[i] = ascii;
+	else
+	{
+	    i--;
+	}
+    x = 0;
+	for (; x <= i;)
+	{
+		printf("%c", p[x]);
+        x++;
+	}
+	return (0);
 }
