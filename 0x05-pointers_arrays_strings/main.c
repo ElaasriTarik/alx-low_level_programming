@@ -10,7 +10,7 @@
 int cnv(char *s)
 {
 int i, n;
-   char pass[14] = "Tada! Congrats";
+char pass[14] = "Tada! Congrats";
 time_t t;
 n = 5;
 /* Intializes random number generator */
