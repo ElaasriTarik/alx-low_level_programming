@@ -15,8 +15,6 @@ n *= -1;
 }
 sign = n;
 if (sign / 10)
-{
 print_number(sign / 10);
-}
 _putchar(sign % 10 + '0');
 }
