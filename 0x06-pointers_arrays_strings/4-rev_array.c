@@ -10,18 +10,16 @@
  */
 void reverse_array(int *a, int n)
 {
-int i;
-i = n - 1;
 int arr[n];
-while (i > 0)
+while ((n - 1) > 0)
 {
-putchar(a[i]);
-if (i != 0)
+putchar(a[n - 1]);
+if ((n - 1) != 0)
 {
-if (i == 1) break;
+if ((n - 1) == 1) break;
 printf(", ");
 }
-i--;
+n--;
 }
 putchar('\n');
 }
