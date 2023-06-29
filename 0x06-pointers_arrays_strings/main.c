@@ -1,41 +1,50 @@
 #include <stdio.h>
 #include <string.h>
 
-void print_array(int *a, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-    int i;
-
-    i = 0;
-    while (i < n)
-    {
-        if (i != 0)
-        {
-            printf(", ");
-        }
-        printf("%d", a[i]);
-        i++;
-    }
-    printf("\n");
+  int i = 0;
+  while (i < n)
+  {
+    if (src[i] == '\0')
+       break;
+    
+    dest[i] = src[i];
+    i++;
+  }
+  return (dest);
 }
 
-void reverse_array(int *a, int n)
-{
-    int r;
-    int i = 0;
-    while(i < n/2){
-        r = a[i];
-        a[i] = a[n-i-1];
-        a[n-i-1] = r;
-        i++;
-    }
-}
 int main(void)
 {
-    int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
+   char s1[98];
+    char *ptr;
+    int i;
 
-    print_array(a, sizeof(a) / sizeof(int));
-    reverse_array(a, sizeof(a) / sizeof(int));
+    for (i = 0; i < 98 - 1; i++)
+    {
+        s1[i] = '*';
+    }
+    s1[i] = '\0';
+    printf("%s\n", s1);
+    ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 5);
+    printf("%s\n", s1);
+    printf("%s\n", ptr);
+    ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 90);
+    printf("%s", s1);
+    printf("%s", ptr);
+    for (i = 0; i < 98; i++)
+    {
+        if (i % 10)
+        {
+            printf(" ");
+        }
+        if (!(i % 10) && i)
+        {
+            printf("\n");
+        }
+        printf("0x%02x", s1[i]);
+    }
     printf("\n");
-    print_array(a, sizeof(a) / sizeof(int));
     return (0);
 }
