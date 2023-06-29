@@ -4,25 +4,23 @@
 char *string_toupper(char *s)
 {
 int x = 0;
-while (s[x] != '\0')
+    while (s[x] != '\0')
 {
-if (s[x] >= 97 && s[x] <= 122)
+   if (s[x] >= 97 && s[x] <= 122)
 {
-s[x] = s[x] - 32;
+   s[x] = s[x] - 32;
 }
-else
+ else
 {
-s[x] = s[x];
+     s[x] = s[x];
 }
 x++;
 }
-return (s);
-    
+return (s);    
 }
-
 int main(void)
 {
-    char str[] = "gouge Away!\n";
+    char str[] = "Look up!\n";
     char *ptr;
 
     ptr = string_toupper(str);
