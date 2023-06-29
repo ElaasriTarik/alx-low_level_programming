@@ -5,7 +5,7 @@
  * @n: number to be printed
  * Return: Success.
  */
-void print_number(int n);
+void print_number(int n)
 {
 unsigned int sign;
 if (n < 0)
