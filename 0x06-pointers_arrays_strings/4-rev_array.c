@@ -11,12 +11,13 @@
 void reverse_array(int *a, int n)
 {
 int arr[n];
-while ((n - 1) > 0)
+n -= 1;
+while ((n) > 0)
 {
-putchar(a[n - 1]);
-if ((n - 1) != 0)
+putchar(a[n]);
+if ((n) != 0)
 {
-if ((n - 1) == 1) break;
+if ((n) == 1) break;
 printf(", ");
 }
 n--;
