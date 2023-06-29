@@ -1,8 +1,10 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
  * *string_toupper - converts a string to uppercase
- * Return: Always Success.
+ * @s: the character to be uppercased.
+ * Return: Success.
 */
 char *string_toupper(char *s)
 {
