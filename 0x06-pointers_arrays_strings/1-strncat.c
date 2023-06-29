@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * *_strncat - concatenates two strings 
+ * *_strncat - concatenates two strings
  *@dest: the frist string
  *@src: the second string
  *@n: number of chars fro src
