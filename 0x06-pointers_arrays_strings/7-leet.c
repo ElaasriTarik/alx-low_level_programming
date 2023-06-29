@@ -11,8 +11,8 @@ int i;
 int x;
 int f;
 x = 0;
-char c[] = "aAeEoOtTlL";
-char l[] = "4433007711";
+char c[] = "oOlLeEaAtT";
+char l[] = "0011334477";
 while (s[x] != '\0')
 {
 i = 0;
