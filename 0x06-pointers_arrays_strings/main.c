@@ -1,44 +1,36 @@
 #include <stdio.h>
 #include <string.h>
 
-char *cap_string(char *s)
+char *leet(char *s)
 {
 int x = 0;
-	while (s[x])
-	{
-		while (!(s[x] >= 'a' && s[x] <= 'z'))
-			x++;
-
-		if (s[x - 1] == ' ' ||
-		    s[x - 1] == '\t' ||
-		    s[x - 1] == '\n' ||
-		    s[x - 1] == ',' ||
-		    s[x - 1] == ';' ||
-		    s[x - 1] == '.' ||
-		    s[x - 1] == '!' ||
-		    s[x - 1] == '?' ||
-		    s[x - 1] == '"' ||
-		    s[x - 1] == '(' ||
-		    s[x - 1] == ')' ||
-		    s[x - 1] == '{' ||
-		    s[x - 1] == '}' ||
-		    x == 0)
-			s[x] -= 32;
-
-		x++;
-	}
-
-	return (s);
-
+char c[] = "aAeEoOtTlL";
+char leet[] = "4433007711";
+while (s[x] != '\0')
+{
+int i = 0;
+int f = 0;
+while (c[i] != '\0')
+{
+    if (s[x] == c[i])
+    {
+        f = i;
+        s[x] = leet[f];
+    }
+i++;
+}
+x++;
+}
+return (s);
 }
 
 int main(void)
 {
-   char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
-    char *ptr;
+   char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+    char *p;
 
-    ptr = cap_string(str);
-    printf("%s", ptr);
-    printf("%s", str);
+    p = leet(s);
+    printf("%s", p);
+    printf("%s", s);
     return (0);
 }
