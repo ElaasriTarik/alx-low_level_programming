@@ -1,0 +1,1 @@
+dest[i] - src[i]
