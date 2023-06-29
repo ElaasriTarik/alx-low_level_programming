@@ -2,7 +2,8 @@
 #include <string.h>
 /**
  * cap_string - capitalizes each word
- *@dest: the string to be capitalized
+ *@s: the string to be capitalized
+ * Return: Success
 */
 char *cap_string(char *s)
 {
