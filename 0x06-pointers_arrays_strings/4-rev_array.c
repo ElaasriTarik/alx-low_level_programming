@@ -20,15 +20,10 @@ x++;
 }
 x--;
 int c = 0;
-while (x > 0)
+while (x >= 0)
 {
 a[c] = arr[x];
 x--;
-c++;
-}
-c = 0;
-while (c < n)
-{
 c++;
 }
 }
