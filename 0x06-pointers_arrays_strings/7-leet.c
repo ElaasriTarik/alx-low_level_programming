@@ -1,32 +1,31 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * leet - changes specific letters to numbers
- *@s: the string to be changed
- * Return: Success
-*/
+ * leet -  encodes a string into 1337 system.
+ * @s: string to be encoded
+ * Return: the full enconded string.
+ */
 char *leet(char *s)
 {
-int i;
-int x;
-int f;
-x = 0;
-char c[] = "oOlLeEaAtT";
-char l[] = "0011334477";
-while (s[x] != '\0')
-{
+int i, x, v;
+
+char c[] = "aAeEoOtTlL";
+char l[] = "4433007711";
+
 i = 0;
-f = 0;
-while (c[i] != '\0')
+while (s[i] != '\0')
 {
-if (s[x] == c[i])
+x = 0;
+v = 0;
+while (c[x] != '\0')
 {
-f = i;
-s[x] = l[f];
-}
-i++;
+if (s[i] == c[x])
+{
+v = x;
+s[i] = l[v];
 }
 x++;
+}
+i++;
 }
 return (s);
 }
