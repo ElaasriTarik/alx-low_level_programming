@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * rot13 -  erotates a character by 13 spots
  * @s: string to be rotated
