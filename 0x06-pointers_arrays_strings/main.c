@@ -1,30 +1,55 @@
 #include <stdio.h>
 #include <string.h>
 
-char *string_toupper(char *s)
+void print_array(int *a, int n)
 {
+    int i;
+
+    i = 0;
+    while (i < n)
+    {
+        if (i != 0)
+        {
+            printf(", ");
+        }
+        printf("%d", a[i]);
+        i++;
+    }
+    printf("\n");
+}
+
+void reverse_array(int *a, int n)
+{
+int arr[n];
 int x = 0;
-    while (s[x] != '\0')
+int fin = n - 1;
+while (x <= fin)
 {
-   if (s[x] >= 97 && s[x] <= 122)
-{
-   s[x] = s[x] - 32;
-}
- else
-{
-     s[x] = s[x];
-}
+arr[x] = a[x];
 x++;
 }
-return (s);    
+x--;
+int c = 0;
+while (x > 0)
+{
+a[c] = arr[x];
+x--;
+c++;
+}
+c = 0;
+while (c < n)
+{
+printf("%d, ", a[c]);
+c++;
+}  
 }
 int main(void)
 {
-    char str[] = "Look up!\n";
-    char *ptr;
+    int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
 
-    ptr = string_toupper(str);
-    printf("%s", ptr);
-    printf("%s", str);
+    print_array(a, sizeof(a) / sizeof(int));
+    reverse_array(a, sizeof(a) / sizeof(int));
+    printf("\n");
+    print_array(a, sizeof(a) / sizeof(int));
     return (0);
 }
