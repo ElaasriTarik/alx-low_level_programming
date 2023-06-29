@@ -1,5 +1,5 @@
+#include "min.c"
 #include <stdio.h>
-#include <string.h>
 /**
  * leet - changes specific letters to numbers
  *@s: the string to be changed
