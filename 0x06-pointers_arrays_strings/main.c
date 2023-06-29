@@ -1,47 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 
-char *rot13(char *s)
+void print_number(int n);
 {
-int i = 0;
-while (s[i] != '\0')
-{
-    int x = 0;
-    while ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
-    {
-        if ((s[i] >= 'a' && s[i] <= 'm') || (s[i] >= 'A' && s[i] <= 'M'))
-        {
-        s[i] += 13;
-        }
-        else
-        {
-        s[i] -= 13;
-        }
-        i++;
-    }
-    i++;
-}
-return (s);
+_putchar(48 + n);
 }
 
 int main(void)
 {
-    char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
-    char *p;
-
-    p = rot13(s);
-    printf("%s", p);
-    printf("------------------------------------\n");
-    printf("%s", s);
-    printf("------------------------------------\n");
-    p = rot13(s);
-    printf("%s", p);
-    printf("------------------------------------\n");
-    printf("%s", s);
-    printf("------------------------------------\n");
-    p = rot13(s);
-    printf("%s", p);
-    printf("------------------------------------\n");
-    printf("%s", s);
+    print_number(98);
+    _putchar('\n');
+    print_number(402);
+    _putchar('\n');
+    print_number(1024);
+    _putchar('\n');
+    print_number(0);
+    _putchar('\n');
+    print_number(-98);
+    _putchar('\n');
     return (0);
 }
