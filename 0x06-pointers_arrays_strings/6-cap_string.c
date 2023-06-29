@@ -10,7 +10,7 @@ char *cap_string(char *s)
 int i = 0;
 while (s[i] != '\0')
 {
-if (s[i] == 32 || s[i] == '\n' || s[i] == '\t' || s[i] == 46)
+if (!(s[i] >= 'a' && s[i] <= 'z') && !(s[i] >= 'A' && s[i] <= 'Z'))
 {
 if (s[i] == '\t')
 {
