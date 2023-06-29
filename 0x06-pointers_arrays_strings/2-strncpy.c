@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * _strncopy - copies a string into another one
+ * _strncpy - copies a string into another one
  *@dest: the frist string
  *@src: the second string
+ *@n: number of chars to copy
  * Return: Always Success.
 */
 char *_strncpy(char *dest, char *src, int n)
