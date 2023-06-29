@@ -2,20 +2,20 @@
 
 char *cc(char *dest, char *src)
 {
-int i = 0;
-while (dest[i] != '\0')
+int s, d = 0;
+while (dest[d] != '\0')
 {
-putchar(dest[i]);
-i++;
+d++;
 }
-i = 0;
-putchar(32);
-while (src[i] != '\0')
+s = 0;
+while (src[s] != '\0')
 {
-putchar(src[i]);
-i++;
+dest[d] = src[s];
+d++;
+s++;
 }
-putchar('\0');
+dest[d] = '\0';
+printf("%s", dest);
 }
 
 int main(void)
