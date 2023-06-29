@@ -23,5 +23,5 @@ d++;
 s++;
 }
 dest[d] = '\0';
-return(dest);
+return (dest);
 }
