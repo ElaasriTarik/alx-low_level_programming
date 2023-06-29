@@ -1,52 +1,31 @@
 #include <stdio.h>
 #include <string.h>
 
-char *_strncpy(char *dest, char *src, int n)
+char *cap_string(char *s)
 {
 int i = 0;
-while (i < n && src[i] != '\0')
+while (s[i] != '\0')
 {
-dest[i] = src[i];
+if (s[i] == 32 || s[i] == '\n' || s[i] == '\t' || s[i] == 46)
+{
+    printf("space %c\n", s[i]);
+if (s[i + 1] >= 97 && s[i + 1] <= 122)
+{
+s[i + 1] = s[i + 1] - 32;
+}
+}
 i++;
 }
-while (i < n)
-{
-dest[i] = '\0';
-i++;
-}
-return (dest);
+return (s);
 }
 
 int main(void)
 {
-   char s1[98];
+   char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
     char *ptr;
-    int i;
 
-    for (i = 0; i < 98 - 1; i++)
-    {
-        s1[i] = '*';
-    }
-    s1[i] = '\0';
-    printf("%s\n", s1);
-    ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 5);
-    printf("%s\n", s1);
-    printf("%s\n", ptr);
-    ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 90);
-    printf("%s", s1);
+    ptr = cap_string(str);
     printf("%s", ptr);
-    for (i = 0; i < 98; i++)
-    {
-        if (i % 10)
-        {
-            printf(" ");
-        }
-        if (!(i % 10) && i)
-        {
-            printf("\n");
-        }
-        printf("0x%02x", s1[i]);
-    }
-    printf("\n");
+    printf("%s", str);
     return (0);
 }
