@@ -20,23 +20,14 @@ void print_array(int *a, int n)
 
 void reverse_array(int *a, int n)
 {
-int arr[n];
-int x = 0;
-int fin = n - 1;
-while (x <= fin)
-{
-arr[x] = a[x];
-x++;
-}
-x--;
-int c = 0;
-while (x >= 0)
-{
-a[c] = arr[x];
-x--;
-c++;
-}
-
+    int r;
+    int i = 0;
+    while(i < n/2){
+        r = a[i];
+        a[i] = a[n-i-1];
+        a[n-i-1] = r;
+        i++;
+    }
 }
 int main(void)
 {
