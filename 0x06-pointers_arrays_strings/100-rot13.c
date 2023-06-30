@@ -1,10 +1,10 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * rot13 - rotates a character by 13 spots
  * @s: string to be rotated
  * Return: the full rotated string.
- */
+*/
 char *rot13(char *s)
 {
 int i = 0;
