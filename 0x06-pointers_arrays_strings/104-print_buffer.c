@@ -11,7 +11,7 @@ void print_buffer(char *b, int size)
 {
     int byte = 0, i; 
     int x = 0;
-    for (; byte < size; byte+=10)
+    while (byte < size)
     {
         if (size <= 0)
 		    printf("\n");
@@ -49,5 +49,6 @@ void print_buffer(char *b, int size)
         i++;
         }
       printf("\n");
+      byte+=10;
     }
 }
