@@ -34,7 +34,6 @@ printf(" ");
 i++;
 x++;
 }
-putchar(' ');
 i = 0;
 while (i < 10)
 {
