@@ -48,8 +48,8 @@ putchar('.');
 i++;
 }
 printf("\n");
-if (size <= 0)
-printf("\n");
 byte += 10;
 }
+if (size <= 0)
+printf("\n");
 }
