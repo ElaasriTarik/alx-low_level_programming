@@ -39,7 +39,7 @@ putchar('.');
 i++;
 }
 printf("\n");
-byte+=10;
+byte += 10;
 }
 if (size <= 0)
 printf("\n");
