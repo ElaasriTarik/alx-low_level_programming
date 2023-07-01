@@ -15,8 +15,6 @@ int byte = 0, i;
 int x = 0;
 while (byte < size)
 {
-if (size <= 0)
-printf("\n");
 printf("%08x: ", byte);
 i = 0;
 while (i < 10)
@@ -49,6 +47,8 @@ putchar('.');
 }
 i++;
 }
+printf("\n");
+if (size <= 0)
 printf("\n");
 byte += 10;
 }
