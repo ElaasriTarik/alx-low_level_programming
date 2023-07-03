@@ -9,7 +9,7 @@ while (x < n)
     s[x] = b;
     x++;
 }
-return (s);
+return (*s);
 
 }
 
