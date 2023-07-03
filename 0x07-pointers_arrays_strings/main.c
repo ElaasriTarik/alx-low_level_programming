@@ -1,37 +1,23 @@
 #include "main.h"
 #include <stdio.h>
 
-char *_memset(char *s, char b, unsigned int n)
+char *_strchr(char *s, char c)
 {
-int x = 0;
-while (x < n)
+
+while (*s != '\0')
 {
-    s[x] = b;
-    x++;
+    if (*s == c)
+    {
+    return (s);
+    }
+    s++;
 }
-return (*s);
-
+if (*s == c)
+{
+return (s);
 }
 
-void simple_print_buffer(char *buffer, unsigned int size)
-{
-        unsigned int i;
-
-        i = 0;
-        while (i < size)
-        {
-                if (i % 10)
-                {
-                        printf(" ");
-                }
-                if (!(i % 10) && i)
-                {
-                        printf("\n");
-                }
-                printf("0x%02x", buffer[i]);
-                i++;
-        }
-        printf("\n");
+return (0);
 }
 
 /**
@@ -41,11 +27,14 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-    char buffer[98] = {0x00};
+    char *s = "hello";
+    char *f;
 
-    simple_print_buffer(buffer, 98);
-    _memset(buffer, 0x01, 95);
-    printf("-------------------------------------------------\n");
-    simple_print_buffer(buffer, 98);    
+    f = _strchr(s, 'l');
+
+    if (f != NULL)
+    {
+        printf("%s\n", f);
+    }
     return (0);
 }
