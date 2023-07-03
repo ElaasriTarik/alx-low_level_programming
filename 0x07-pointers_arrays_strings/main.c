@@ -1,36 +1,29 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * _strspn - number of bytes
- * @s: initial segment n
- * @accept: bytes to look for in s
- * Return: number of bytes that were found
+ * print_chessboard - prints a chessboard
+ * @s: a 2D array
+ * Return: Success
 */
 
-char *_strstr(char *haystack, char *needle)
+void print_chessboard(char (*a)[8])
 {
-char *res = haystack;
-char *ff = needle;
-while (*haystack)
+int i = 0;
+int x;
+while (i < 8)
 {
-while (*needle)
-{
-if (*haystack++ != *needle++)
-{
-break;
+    x = 0;
+    while (x < 8)
+    {
+     printf("%c", a[i][x]);
+     x++;
+    }
+    printf("\n");
+i++;
 }
+
 }
-if (!*needle)
-{
-return (res);
-}
-needle = ff;
-res++;
-haystack = res;
-}
-return (NULL);
-}
+
 
 /**
  * main - check the code
@@ -39,11 +32,16 @@ return (NULL);
  */
 int main(void)
 {
-   char *s = "hello, world";
-    char *f = "world";
-    char *t;
-
-    t = _strstr(s, f);
-    printf("%s\n", t);
+   char board[8][8] = {
+        {'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
+        {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+        {'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'},
+    };
+    print_chessboard(board);
     return (0);
 }
