@@ -23,7 +23,7 @@ break;
 }
 if (!*needle)
 {
-return (result);
+return (res);
 }
 needle = ff;
 needle++;
