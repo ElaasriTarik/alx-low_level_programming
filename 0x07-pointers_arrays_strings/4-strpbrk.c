@@ -3,8 +3,8 @@
 /**
  * _strpbrk - function locates the first occurrence in the string s
  * of any of the bytes in the string accept
- * @s: pointer to char
- * @c: char to find
+ * @s: string
+ * @accept: chars to find
  * Return: *s
 */
 
