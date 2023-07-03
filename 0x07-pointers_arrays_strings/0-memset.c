@@ -5,15 +5,16 @@
  * @s: the memory spots
  * @b: the value to be fillied with
  * @n: the number of times to fill with 
+ * Return: *s
 */
 
 char *_memset(char *s, char b, unsigned int n)
 {
-int x = 0;
+unsigned int x = 0;
 while (x < n)
 {
 s[x] = b;
 x++;
 }
-return (*s);
+return (s);
 }
