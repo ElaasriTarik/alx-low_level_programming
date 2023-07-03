@@ -10,20 +10,21 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-int x = 0;
-while (*s)
-{
- while (accept[x])
- {
-    if (*s == accept[x])
-    {
-    return (s);
-    }
-    x++;
- }
- s++;
-}
-return (NULL);
+int x;
+
+	while (*s)
+	{
+        x = 0;
+		for (; accept[x] ; x++)
+		{
+			if (*s == accept[x])
+			{
+			return (s);
+			}
+		}
+		s++;
+	}
+	return (NULL);
 }
 /**
  * main - check the code
