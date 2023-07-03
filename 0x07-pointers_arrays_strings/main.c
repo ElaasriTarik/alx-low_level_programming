@@ -8,24 +8,24 @@
  * Return: number of bytes that were found
 */
 
-char *_strpbrk(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
 int x;
-
-	while (*s)
-	{
-        x = 0;
-		for (; accept[x] ; x++)
-		{
-			if (*s == accept[x])
-			{
-			return (s);
-			}
-		}
-		s++;
-	}
-	return (NULL);
+while (*needle)
+{
+x = 0;
+for (; haystack[x]; x++)
+{
+if (*needle == haystack[x])
+{
+return (needle);
 }
+}
+needle++;
+}
+return (NULL);
+}
+
 /**
  * main - check the code
  *
@@ -33,11 +33,11 @@ int x;
  */
 int main(void)
 {
-    char *s = "hello, world";
+   char *s = "hello, world";
     char *f = "world";
     char *t;
 
-    t = _strpbrk(s, f);
+    t = _strstr(s, f);
     printf("%s\n", t);
     return (0);
 }
