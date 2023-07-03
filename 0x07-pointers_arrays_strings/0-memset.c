@@ -1,8 +1,8 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _memset - fill the n spots of memory with b
+ * @s: the memory spots
  * @b: the value to be fillied with
  * @n: the number of times to fill with 
 */
