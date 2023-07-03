@@ -8,24 +8,22 @@
  * Return: number of bytes that were found
 */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-unsigned int count = 0;
-	char *cpy = accept;
-
-	while (*s++)
-	{
-		while (*accept++)
-			if (*(s - 1) == *(accept - 1))
-			{
-				count++;
-				break;
-			}
-		if (!(*--accept))
-			break;
-		accept = cpy;
-	}
-	return (count);
+int x = 0;
+while (*s)
+{
+ while (accept[x])
+ {
+    if (*s == accept[x])
+    {
+    return (s);
+    }
+    x++;
+ }
+ s++;
+}
+return (NULL);
 }
 /**
  * main - check the code
@@ -35,10 +33,10 @@ unsigned int count = 0;
 int main(void)
 {
     char *s = "hello, world";
-    char *f = "oleh";
-    unsigned int n;
+    char *f = "world";
+    char *t;
 
-    n = _strspn(s, f);
-    printf("%u\n", n);
+    t = _strpbrk(s, f);
+    printf("%s\n", t);
     return (0);
 }
