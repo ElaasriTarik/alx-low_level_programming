@@ -14,7 +14,7 @@ int x;
 while (*s)
 {
 x = 0;
-for (; accept[x] ; x++)
+for (; accept[x]; x++)
 {
 if (*s == accept[x])
 {
