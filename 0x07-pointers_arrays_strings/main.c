@@ -1,27 +1,16 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_chessboard - prints a chessboard
- * @s: a 2D array
- * Return: Success
+ * set_string - sets the value of a pointer to another pointer
+ * @s: string
+ * @to: the destination
+ * Return: *s
 */
 
-void print_chessboard(char (*a)[8])
+void set_string(char **s, char *to)
 {
-int i = 0;
-int x;
-while (i < 8)
-{
-    x = 0;
-    while (x < 8)
-    {
-     printf("%c", a[i][x]);
-     x++;
-    }
-    printf("\n");
-i++;
-}
-
+*s = to;
+return (s);
 }
 
 
@@ -32,16 +21,11 @@ i++;
  */
 int main(void)
 {
-   char board[8][8] = {
-        {'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
-        {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
-        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-        {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
-        {'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'},
-    };
-    print_chessboard(board);
+   char *s0 = "Bob Dylan";
+    char *s1 = "Robert Allen";
+
+    printf("%s, %s\n", s0, s1);
+    set_string(&s1, s0);
+    printf("%s, %s\n", s0, s1);
     return (0);
 }
