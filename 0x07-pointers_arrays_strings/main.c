@@ -10,23 +10,24 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-    int x;
 char *res = haystack;
-char *ff = needle; 
+char *ff = needle;
+while (*haystack)
+{
 while (*needle)
 {
-x = 0;
-for (; haystack[x]; x++)
+if (*haystack++ != *needle++)
 {
-if (*needle == haystack[x])
-{
-return (needle);
+break;
 }
+}
+if (!*needle)
+{
+return (res);
 }
 needle = ff;
-needle++;
+res++;
 haystack = res;
-
 }
 return (NULL);
 }

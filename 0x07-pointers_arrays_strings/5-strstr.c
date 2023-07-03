@@ -26,7 +26,7 @@ if (!*needle)
 return (res);
 }
 needle = ff;
-needle++;
+res++;
 haystack = res;
 }
 return (NULL);
