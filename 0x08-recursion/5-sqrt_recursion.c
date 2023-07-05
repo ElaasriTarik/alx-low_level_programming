@@ -15,7 +15,7 @@ return (_get_sqr(n, 1));
 /**
  * _get_sqr - called up by _sqrt_recursion
  * @n: int
- * @i: int
+ * @x: int
  * Return: sqrt
  */
 int _get_sqr(int n, int x)
