@@ -6,13 +6,13 @@
  *Return: string
 */
 
-int _strlen_recursion(char *s)
+int factorial(int n)
 {
 //int i = 0;
-if (*s)
-{
-return (_strlen_recursion(s + 1) + 1);
-}
+if (n == 1)
+return (1);
+else
+return (n * factorial(n - 1));
 }
 
 
@@ -25,7 +25,7 @@ int main(void)
 {
     int n;
 
-    n = _strlen_recursion("Corbin Coleman");
+    n = factorial(4);
     printf("%d\n", n);
     return (0);
 }
