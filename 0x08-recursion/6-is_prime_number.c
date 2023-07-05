@@ -22,7 +22,7 @@ int cc(int d, int n)
 {
 if (n == 0 || n == 1)
 return (0);
-else if (x > n /2)
+else if (d > n /2)
 else
 return (cc(d + 1, n));
 }
