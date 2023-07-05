@@ -6,10 +6,8 @@
  *Return: string
 */
 
-int i = 0;
 void _puts_recursion(char *s)
 {
-
 if (*s == '\0')
 {
 printf("\n");
