@@ -7,10 +7,10 @@
  *Return: (Success)
 */
 int is_palindrome(char *s)
-{  
+{
 int length = strlen(s);
 if (length == 0 || length == 1)
-return 1;
+return (1);
 return check(s, 0, length - 1);
 }
 
@@ -26,14 +26,14 @@ int check(char *str, int left, int right)
 {
 if (left >= right)
 {
-return 1;
+return (1);
 }
 else if (str[left] == str[right])
 {
-return check(str, left + 1, right - 1);
+return (check(str, left + 1, right - 1));
 }
 else
 {
-return 0;
+return (0);
 }
 }
