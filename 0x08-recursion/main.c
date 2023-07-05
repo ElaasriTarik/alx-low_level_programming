@@ -8,15 +8,12 @@
 
 void _puts_recursion(char *s)
 {
-if (*s == '\0')
+if (*s)
 {
-printf("\n");
-}
-else
-{
-printf("%c", *s);
 _puts_recursion(s + 1);
+printf("%c", *s);
 }
+
 }
 
 
@@ -27,6 +24,6 @@ _puts_recursion(s + 1);
  */
 int main(void)
 {
-    _puts_recursion("Puts with recursion");
+    _puts_recursion("Alan Walker");
     return (0);
 }
