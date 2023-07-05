@@ -8,7 +8,10 @@
 
 int is_prime_number(int n)
 {
-return cc(3, n);
+if (n == 2)
+return (1);
+  
+return (cc(3, n));
 }
 
 /**
@@ -22,7 +25,7 @@ int cc(int d, int n)
 {
 if (n == 0 || n == 1)
 return (0);
-else if (d > n /2)
+else if (d > n / 2)
 return (1);
 else
 return (cc(d + 1, n));
