@@ -9,6 +9,8 @@
 int factorial(int n)
 {
 //int i = 0;
+if (n < 0)
+return (-1);
 if (n == 1)
 return (1);
 else
@@ -25,7 +27,7 @@ int main(void)
 {
     int n;
 
-    n = factorial(4);
+    n = factorial(-98);
     printf("%d\n", n);
     return (0);
 }
