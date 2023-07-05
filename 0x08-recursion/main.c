@@ -6,44 +6,47 @@
  *@s: string to be printed
  *Return: string
 */
-int check(char *str, int left, int right);
-
-int is_palindrome(char *s)
-{  
-int length = strlen(s);
-if (length == 0 || length == 1)
-return 1;
-return check(s, 0, length - 1);
-  
-}
-
-int check(char *str, int left, int right)
+int wildcmp(char *s1, char *s2)
 {
-if (left >= right)
-{
-return 1;
-}
-else if (str[left] == str[right])
-{
-return check(str, left + 1, right - 1);
-}
-else
-{
-return 0;
-}
+if (*s1 != '\0' || *s1 != '\0') {
+    if (*s2 != '\0' && *s2 == '*')
+        return 1;
+    else
+    return wildcmp(s1 + 1, s2 + 1);
+    if (*s1 == *s2)
+        return 1;
+    if (*s1 != *s2)
+       return 0;
+    }
 }
 
 int main(void)
 {
     int r;
 
-    r = is_palindrome("level");
+    r = wildcmp("main.c", "*.c");
     printf("%d\n", r);
-    r = is_palindrome("redder");
+    r = wildcmp("main.c", "m*a*i*n*.*c*");
     printf("%d\n", r);
-    r = is_palindrome("test");
+    r = wildcmp("main.c", "main.c");
     printf("%d\n", r);
-    r = is_palindrome("step on no pets");
+    r = wildcmp("main.c", "m*c");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "ma********************************c");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "*");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "***");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "m.*c");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "**.*c");
+    printf("%d\n", r);
+    r = wildcmp("main-main.c", "ma*in.c");
+    printf("%d\n", r);
+    r = wildcmp("main", "main*d");
+    printf("%d\n", r);
+    r = wildcmp("abc", "*b");
     printf("%d\n", r);
     return (0);
 }
