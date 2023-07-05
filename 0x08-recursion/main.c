@@ -6,14 +6,13 @@
  *Return: string
 */
 
-void _puts_recursion(char *s)
+int _strlen_recursion(char *s)
 {
+//int i = 0;
 if (*s)
 {
-_puts_recursion(s + 1);
-printf("%c", *s);
+return (_strlen_recursion(s + 1) + 1);
 }
-
 }
 
 
@@ -24,6 +23,9 @@ printf("%c", *s);
  */
 int main(void)
 {
-    _puts_recursion("Alan Walker");
+    int n;
+
+    n = _strlen_recursion("Corbin Coleman");
+    printf("%d\n", n);
     return (0);
 }
