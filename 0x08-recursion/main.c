@@ -6,14 +6,16 @@
  *Return: string
 */
 
-int _pow_recursion(int x, int y)
+int _sqrt_recursion(int n)
 {
-if (y < 0)
-return (-1);
-if (y == 0)
-return (0);
-if (y > 1)
-return (x * _pow_recursion(x, y - 1));
+    int x = n;
+    int y = 1;
+if (x - y > 0)
+{
+        x = (x + y) / 2;
+        y = n / x;
+}
+return x;
 }
 
 
@@ -21,7 +23,7 @@ int main(void)
 {
     int n;
 
-    n = _pow_recursion(9, 8);
+    n = _sqrt_recursion(16);
     printf("%d\n", n);
     return (0);
 }
