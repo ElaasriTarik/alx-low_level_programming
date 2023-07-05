@@ -8,12 +8,13 @@
 
 int _pow_recursion(int x, int y)
 {
-if (y < 0)
-return (-1);
+if (y <= 0)
+return (y);
 if (y > 1)
 {
 return (x * _pow_recursion(x, y - 1));
 }
+
 }
 
 
@@ -26,7 +27,7 @@ int main(void)
 {
     int n;
 
-    n = _pow_recursion(2, -16);
+    n = _pow_recursion(9, 8);
     printf("%d\n", n);
     return (0);
 }
