@@ -17,7 +17,7 @@ printf("Error\n");
 return (1);
 }
 cents = atoi(argv[1]);
-if (argv[1] < 0)
+if (cents < 0)
 {
 printf("0\n");
 }
