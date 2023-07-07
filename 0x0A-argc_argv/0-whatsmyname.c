@@ -8,8 +8,6 @@
 
 int main(int argc, char **argv)
 {
-while(argc--)
-printf("%s\n", *argv++);
-exit(EXIT_SUCCESS);
+printf("%s\n", argv[0]);
 return (0);
 }
