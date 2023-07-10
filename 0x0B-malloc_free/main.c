@@ -16,7 +16,8 @@ x1 = 0;
 else
 {
 dup1 = s1;
-for (; *s1; x1++, s1++);
+for (; *s1; x1++, s1++)
+;
 }
 if (s2 == NULL)
 {
@@ -27,25 +28,17 @@ x2 = 0;
 else
 {
 dup2 = s2;
-for (; *s2; x2++, s2++);
+for (; *s2; x2++, s2++)
+;
 }
 size = x1 + x2;
-printf("%d %c %c\n", size, dup1, dup2);
 ptr = (char *)malloc(size *sizeof(char) + 1);
 if (ptr == NULL)
 return (NULL);
-while (i <= x1)
-{
+for (; i <= x1; i++, dup1++)
 ptr[i] = *dup1;
-dup1++;
-i++;
-}
-while (x1 <= size)
-{
+for (; x1 <= size; x1++, dup2++)
 ptr[x1] = *dup2;
-dup2++;
-x1++;
-}
 return (ptr);
 }
 /**

@@ -39,17 +39,9 @@ size = x1 + x2;
 ptr = (char *)malloc(size *sizeof(char) + 1);
 if (ptr == NULL)
 return (NULL);
-while (i <= x1)
-{
+for (; i <= x1; i++, dup1++)
 ptr[i] = *dup1;
-dup1++;
-i++;
-}
-while (x1 <= size)
-{
+for (; x1 <= size; x1++, dup2++)
 ptr[x1] = *dup2;
-dup2++;
-x1++;
-}
 return (ptr);
 }
