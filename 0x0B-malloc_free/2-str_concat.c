@@ -2,6 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * str_concat - concatenate two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: (return new piinter string).
+ */
+
+
 char *str_concat(char *s1, char *s2)
 {
 char *ptr;
@@ -23,14 +31,15 @@ s2++;
 }
 size = x1 + x2;
 printf("%d\n", size);
-ptr = (char *)malloc(size * sizeof(char) + 1);
+ptr = (char *)malloc(size *sizeof(char) + 1);
+if (ptr == NULL)
+return (NULL);
 while (i <= x1)
 {
 ptr[i] = *dup1;
 dup1++;
 i++;
 }
-
 while (x1 <= size)
 {
 ptr[x1] = *dup2;
@@ -38,23 +47,4 @@ dup2++;
 x1++;
 }
 return (ptr);
-}
-/**
- * main - check the code for ALX School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    char *s;
-
-    s = str_concat("Betty ", "Holberton");
-    if (s == NULL)
-    {
-        printf("failed\n");
-        return (1);
-    }
-    printf("%s\n", s);
-    free(s);
-    return (0);
 }
