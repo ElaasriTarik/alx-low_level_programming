@@ -23,7 +23,7 @@ s2++;
 }
 size = x1 + x2;
 printf("%d\n", size);
-ptr = (char *)malloc(size * sizeof(char) + 1);
+ptr = (char *)malloc(size * sizeof(char) + 2);
 if (ptr == NULL)
 return (NULL);
 while (i <= x1)
