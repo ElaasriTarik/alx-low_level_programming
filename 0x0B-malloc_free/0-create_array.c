@@ -17,6 +17,8 @@ char *ar;
 if (size == 0)
 return (NULL);
 ar = (char *)malloc(size * sizeof(char));
+if (cr == NULL)
+return (NULL);
 while (x < size)
 {
 ar[x] = c;
