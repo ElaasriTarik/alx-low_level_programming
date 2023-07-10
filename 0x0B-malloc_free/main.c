@@ -6,11 +6,17 @@ char *str_concat(char *s1, char *s2)
 {
 char *ptr;
 int size;
-char *dup1 = s1;
-char *dup2 = s2;
 int x1 = 0;
 int x2 = 0;
 int i = 0;
+char *dup1;
+char *dup2;
+if (s1 == NULL)
+s1 = "";
+if (s2 == NULL)
+s2 = "";
+dup1 = s1;
+dup2 = s2;
 while (*s1)
 {
 x1++;
@@ -22,9 +28,9 @@ x2++;
 s2++;
 }
 size = x1 + x2;
-printf("%d\n", size);
-ptr = (char *)malloc(size * sizeof(char) + 2);
+ptr = (char *)malloc(size *sizeof(char) + 1);
 if (ptr == NULL)
+free(ptr);
 return (NULL);
 while (i <= x1)
 {
@@ -49,7 +55,7 @@ int main(void)
 {
     char *s;
 
-    s = str_concat("Betty ", "Holberton");
+    s = str_concat("git ", "git");
     if (s == NULL)
     {
         printf("failed\n");
