@@ -4,13 +4,8 @@
 
 char *str_concat(char *s1, char *s2)
 {
-char *ptr;
-int size;
-int x1 = 0;
-int x2 = 0;
-int i = 0;
-char *dup1;
-char *dup2;
+char *ptr, *dup1, *dup2;
+int size, x1 = 0, x2 = 0, i = 0;
 if (s1 == NULL)
 {
 s1 = "";
