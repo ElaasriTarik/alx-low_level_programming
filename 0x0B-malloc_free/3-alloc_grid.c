@@ -14,7 +14,7 @@ int **ar;
 if (width <= 0 || height <= 0)
 return (NULL);
 ar = (int **)malloc(sizeof(int *) * height);
-if (arr == NULL)
+if (ar == NULL)
 return (NULL);
 for (i = 0; i < height; i++)
 {
