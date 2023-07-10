@@ -21,7 +21,7 @@ while (*s2)
 x2++;
 s2++;
 }
-size = x1 + x2 - 1;
+size = x1 + x2;
 printf("%d\n", size);
 ptr = (char *)malloc(size * sizeof(char) + 1);
 if (ptr == NULL)
