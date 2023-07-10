@@ -18,10 +18,9 @@ return (NULL);
 while (*str)
 {
 x++;
-*str++;
+str++;
 }
 ptr = (char*)malloc(x * sizeof(char));
-int i = 0;
 while (x >= 0)
 {
 ptr[x] = *str;
