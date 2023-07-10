@@ -20,7 +20,8 @@ x1 = 0;
 else
 {
 dup1 = s1;
-for (; *s1; x1++, s1++);
+for (; *s1; x1++, s1++)
+;
 }
 if (s2 == NULL)
 {
@@ -31,7 +32,8 @@ x2 = 0;
 else
 {
 dup2 = s2;
-for (; *s2; x2++, s2++);
+for (; *s2; x2++, s2++)
+;
 }
 size = x1 + x2;
 ptr = (char *)malloc(size *sizeof(char) + 1);
