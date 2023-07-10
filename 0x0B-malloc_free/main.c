@@ -2,45 +2,59 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-char *str_concat(char *s1, char *s2)
+int **alloc_grid(int width, int height)
 {
-char *ptr, *dup1, *dup2;
-int size, x1 = 0, x2 = 0, i = 0;
-if (s1 == NULL)
-{
-s1 = "";
-dup1 = s1;
-x1 = 0;
-}
-else
-{
-dup1 = s1;
-for (; *s1; x1++, s1++)
-;
-}
-if (s2 == NULL)
-{
-s2 = "";
-dup2 = s2;
-x2 = 0;
-}
-else
-{
-dup2 = s2;
-for (; *s2; x2++, s2++)
-;
-}
-size = x1 + x2;
-ptr = (char *)malloc(size *sizeof(char) + 1);
-if (ptr == NULL)
+unsigned int i, j;
+int **ar;
+if (width <= 0 || height <= 0)
 return (NULL);
-for (; i <= x1; i++, dup1++)
-ptr[i] = *dup1;
-for (; x1 <= size; x1++, dup2++)
-ptr[x1] = *dup2;
-return (ptr);
+ar = (int **)malloc(height * sizeof(int *));
+for (i = 0; i < height; i++)
+{
+ar[i] = (int *)malloc(width * sizeof(int *));
+if (ar[i] == NULL)
+{
+free(ar);
+return NULL;
 }
+
+}
+
+
+for (i = 0; i < height; i++)
+{
+for ( j = 0; j < width; j++)
+{
+ar[i][j] = 0;
+}
+}
+return (ar);
+}
+
+/**
+ * main - check the code for ALX School students.
+ *
+ * Return: Always 0.
+ */
+void print_grid(int **grid, int width, int height)
+{
+    int w;
+    int h;
+
+    h = 0;
+    while (h < height)
+    {
+        w = 0;
+        while (w < width)
+        {
+            printf("%d ", grid[h][w]);
+            w++;
+        }
+        printf("\n");
+        h++;
+    }   
+}
+
 /**
  * main - check the code for ALX School students.
  *
@@ -48,15 +62,17 @@ return (ptr);
  */
 int main(void)
 {
-    char *s;
+    int **grid;
 
-    s = str_concat("git ", "commit");
-    if (s == NULL)
+    grid = alloc_grid(6, 4);
+    if (grid == NULL)
     {
-        printf("failed\n");
         return (1);
     }
-    printf("%s\n", s);
-    free(s);
+    print_grid(grid, 6, 4);
+    printf("\n");
+    grid[0][3] = 98;
+    grid[3][4] = 402;
+    print_grid(grid, 6, 4);
     return (0);
 }
