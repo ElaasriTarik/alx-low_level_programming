@@ -41,7 +41,7 @@ ptr[cc] = '\n';
 cc++;
 i++;
 }
-ptr[cc] = '\n';
+
 
 return (ptr);
 }

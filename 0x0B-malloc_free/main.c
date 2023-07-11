@@ -24,7 +24,7 @@ printf("%d \n", count);
 ptr = malloc(count * sizeof(char) + 1);
 if (ptr == NULL)
 return (NULL);
-i = 1;
+i = 0;
 while (i < ac)
     {
         k = 0;
@@ -38,7 +38,7 @@ while (i < ac)
         cc++;
         i++;
     }
-    ptr[cc] = '\n';
+   // ptr[cc] = '\n';
 return (ptr);
 
 }
