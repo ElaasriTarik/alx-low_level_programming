@@ -4,7 +4,7 @@
 
 /**
  * this_free_grid - frees a 2 dimensional array.
- * @grid: multidimensional array of char.
+ * @g: multidimensional array of char.
  * @ver: height of the array.
  *
  * Return: no return
