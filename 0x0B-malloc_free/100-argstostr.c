@@ -9,7 +9,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-int i , k, cc = 0;
+int i, k, cc = 0;
 char *ptr;
 int count = 0;
 for (i = 1; i < ac; i++)
@@ -24,11 +24,10 @@ for (; av[i][k] != '\0'; k++)
 count++;
 }
 }
-printf("%d \n", count);
-ptr = malloc(count * sizeof(char) + 1);
+ptr = malloc(count *sizeof(char) + 1);
 if (ptr == NULL)
 return (NULL);
-i = 1;
+i = 0;
 while (i < ac)
 {
 k = 0;
