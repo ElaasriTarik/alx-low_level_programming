@@ -18,15 +18,12 @@ return (NULL);
 }
 for (i = 1; i < ac; i++)
 {
-if (av[i] == NULL)
-{
-return (NULL);
-}
 k = 0;
 for (; av[i][k] != '\0'; k++)
 {
 count++;
 }
+count++;
 }
 ptr = malloc((count *sizeof(char)) + 1);
 if (ptr == NULL)
