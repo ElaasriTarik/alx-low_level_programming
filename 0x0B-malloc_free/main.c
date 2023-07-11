@@ -8,7 +8,7 @@ char *argstostr(int ac, char **av)
     int i , k, cc = 0;
     char *ptr;
     int count = 0;
-    for (i = 1; i < ac; i++)
+    for (i = 0; i < ac; i++)
     {
         if (av[i] == NULL)
         {
@@ -19,6 +19,7 @@ char *argstostr(int ac, char **av)
         {
          count++;
         }
+        count++;
     }
 printf("%d \n", count);
 ptr = malloc(count * sizeof(char) + 1);

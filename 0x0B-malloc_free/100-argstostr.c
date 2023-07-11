@@ -16,7 +16,7 @@ if (av == NULL || ac == 0)
 {
 return (NULL);
 }
-for (i = 1; i < ac; i++)
+for (i = 0; i < ac; i++)
 {
 k = 0;
 for (; av[i][k] != '\0'; k++)
