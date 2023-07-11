@@ -2,28 +2,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void free_grid(int **grid, int height)
+{
+    int i, j;
+for (i = 0; i < height; i++)
+
+{
+free(grid[i]);
+}
+
+}
 int **alloc_grid(int width, int height)
 {
-unsigned int i, j;
+int i, j;
 int **ar;
 if (width <= 0 || height <= 0)
 return (NULL);
-ar = (int **)malloc(height * sizeof(int *));
+ar = (int **)malloc(sizeof(int *) * height);
+if (ar == NULL)
+return (NULL);
 for (i = 0; i < height; i++)
 {
-ar[i] = (int *)malloc(width * sizeof(int *));
+ar[i] = (int *)malloc(sizeof(int) * width);
 if (ar[i] == NULL)
 {
 free(ar);
-return NULL;
+for (j = 0; j <= i; j++)
+free(ar[j]);
+return (NULL);
 }
-
 }
-
-
 for (i = 0; i < height; i++)
 {
-for ( j = 0; j < width; j++)
+for (j = 0; j < width; j++)
 {
 ar[i][j] = 0;
 }
@@ -31,11 +42,6 @@ ar[i][j] = 0;
 return (ar);
 }
 
-/**
- * main - check the code for ALX School students.
- *
- * Return: Always 0.
- */
 void print_grid(int **grid, int width, int height)
 {
     int w;
@@ -74,5 +80,6 @@ int main(void)
     grid[0][3] = 98;
     grid[3][4] = 402;
     print_grid(grid, 6, 4);
+    free_grid(grid, 4);
     return (0);
 }
