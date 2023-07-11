@@ -1,1 +1,1 @@
-int i = 0;
+void free_grid(char **grid, unsigned int height)
