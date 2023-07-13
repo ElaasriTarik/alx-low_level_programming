@@ -33,7 +33,7 @@ if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
-if(ss < 0)
+if (ss < 0)
 return (NULL);
 if (ss >= _len(s2))
 ss = _len(s2);
