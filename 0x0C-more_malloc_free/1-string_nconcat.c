@@ -37,6 +37,9 @@ if (s2 == NULL)
 s2 = "";
 if(ss == NULL)
 return (NULL);
+if (ss >= _len(s2))
+ss = _len(s2);
+
 length = _len(s1) + _len(s2);
 printf("%d\n", length);
 p = malloc(sizeof(char) * length);
@@ -48,7 +51,7 @@ p[i] = *s1;
 i++;
 *s1++;
 }
-while (b <= n)
+while (b <= ss)
 {
 p[i] = *s2;
 i++;
