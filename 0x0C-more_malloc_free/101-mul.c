@@ -39,8 +39,8 @@ char *big_multiply(char *s1, char *s2)
 {
 char *res;
 int xx1, yy2, a, b, c, d;
-xx1 = _strlen(s1);
-yy2 = _strlen(s2);
+xx1 = len(s1);
+yy2 = len(s2);
 res = malloc(a = d = xx1 + yy2);
 if (!res)
 printf("Error\n"), exit(98);
@@ -48,16 +48,16 @@ while (a--)
 r[a] = 0;
 for (xx1--; xx1 >= 0; xx1--)
 {
-if (!_isdigit(s1[xx1]))
+if (!check_digit(s1[xx1]))
 {
 free(res);
 printf("Error\n"), exit(98);
 }
 a = s1[xx1] - '0';
 c = 0;
-for (yy2 = _strlen(s2) - 1; yy2 >= 0; yy2--)
+for (yy2 = len(s2) - 1; yy2 >= 0; yy2--)
 {
-if (!_isdigit(s2[yy2]))
+if (!check_digit(s2[yy2]))
 {
 free(res);
 printf("Error\n"), exit(98);
@@ -86,7 +86,7 @@ char *res;
 int a, b, d;
 if (argc != 3)
 printf("Error\n"), exit(98);
-d = _strlen(argv[1]) + _strlen(argv[2]);
+d = len(argv[1]) + len(argv[2]);
 res = big_multiply(argv[1], argv[2]);
 b = 0;
 a = 0;
