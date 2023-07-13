@@ -10,10 +10,9 @@
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+void *pp;
 if (nmemb == 0 || size == 0)
 return (NULL);
-
-void *pp;
 
 pp = malloc(nmemb * size);
 if (pp == NULL)
