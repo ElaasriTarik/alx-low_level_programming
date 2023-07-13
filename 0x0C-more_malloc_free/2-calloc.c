@@ -21,7 +21,7 @@ return (NULL);
 x = 0;
 while (x < (nmemb * size))
 {
-*((char *)(pp) + x) = 0;
+*((char *)(pp) +x) = 0;
 x++;
 }
 
