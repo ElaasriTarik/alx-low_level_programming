@@ -1,9 +1,14 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-#include <string.h>
 
+/**
+ * string_nconcat - function that concats two strings
+ *@s1: string
+ *@s2: string
+ *@n: memory size
+ * Return: (pointer)
+*/
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -36,23 +41,8 @@ b++;
 }
 while (*p)
 {
-    printf("%c\n", *p);
-    *p++;
+printf("%c\n", *p);
+*p++;
 }
 return (p);
-}
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    char *concat;
-
-    concat = string_nconcat("Best ", "School !!!", 6);
-    printf("%s\n", concat);
-    free(concat);
-    return (0);
 }
