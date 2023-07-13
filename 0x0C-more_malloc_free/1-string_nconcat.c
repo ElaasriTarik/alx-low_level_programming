@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -25,7 +26,7 @@ return (x);
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-int i = 0;
+int i = 0, ss = n;
 char *p;
 int b = 0;
 int length;
@@ -33,6 +34,8 @@ if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
+if(ss == NULL)
+return (NULL);
 length = _len(s1) + _len(s2);
 printf("%d\n", length);
 p = malloc(sizeof(char) * length);
