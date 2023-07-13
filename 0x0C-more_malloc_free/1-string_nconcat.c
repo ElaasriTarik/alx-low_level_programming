@@ -1,8 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
-#include <string.h>
 
 /**
  * _len - return number of chars in a string
@@ -39,9 +37,7 @@ if(ss < 0)
 return (NULL);
 if (ss >= _len(s2))
 ss = _len(s2);
-
 length = _len(s1) + ss + 1;
-printf("%d\n", length);
 p = malloc(sizeof(char) * length);
 if (p == NULL)
 return (NULL);
