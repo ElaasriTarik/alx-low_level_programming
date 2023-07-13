@@ -15,7 +15,7 @@ return (NULL);
 
 void *pp;
 
-pp = (void *)malloc(nmemb * size);
+pp = malloc(nmemb * size);
 if (pp == NULL)
 return (NULL);
 
