@@ -4,7 +4,14 @@
 #include <limits.h>
 #include <string.h>
 
+int _len(char *str)
+{
+int x = 0;
+for (; str[x]; x++)
+;
+return (x);
 
+}
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 int i = 0;
@@ -13,7 +20,7 @@ if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
-int length = strlen(s1) + strlen(s2);
+int length = _len(s1) + _len(s2);
 printf("%d\n", length);
 p = malloc(sizeof(char) * length);
 if (p == NULL)
@@ -36,8 +43,8 @@ b++;
 }
 while (*p)
 {
-    printf("%c\n", *p);
-    *p++;
+printf("%c\n", *p);
+*p++;
 }
 return (p);
 }

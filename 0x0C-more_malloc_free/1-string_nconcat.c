@@ -2,6 +2,20 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <string.h>
+
+/**
+ * _len - return number of chars in a string
+ *@str: string to use
+ * Return: (int)
+*/
+
+int _len(char *str)
+{
+int x = 0;
+for (; str[x]; x++)
+;
+return (x);
+}
 /**
  * string_nconcat - function that concats two strings
  *@s1: string
@@ -9,7 +23,6 @@
  *@n: memory size
  * Return: (pointer)
 */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 int i = 0;
@@ -20,7 +33,7 @@ if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
-length = strlen(s1) + strlen(s2);
+length = _len(s1) + _len(s2);
 printf("%d\n", length);
 p = malloc(sizeof(char) * length);
 if (p == NULL)
