@@ -18,21 +18,31 @@ if (new_size == old_size)
 return (ptr);
 
 if (ptr == NULL)
+{
 pp = malloc(new_size);
+if (pp == NULL)
+return (NULL);
+
+return (pp);
+}
+
 
 if (new_size == 0 && ptr != NULL)
 {
 free(ptr);
 return (NULL);
 }
-
+if (new_size > old_size)
+{
 pp = malloc(new_size);
 if (pp == NULL)
 return (NULL);
 
-for (; i < old_size ; i++)
+for (; i < old_size && i < new_size ; i++)
 {
 *((char *)(pp) + i) = *((char *)(ptr) + i);
+}
+free(ptr);
 }
 
 return (pp);
