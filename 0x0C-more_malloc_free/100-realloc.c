@@ -40,7 +40,7 @@ return (NULL);
 
 for (; i < old_size && i < new_size ; i++)
 {
-*((char *)(pp) + i) = *((char *)(ptr) + i);
+*((char *)(pp) +i) = *((char *)(ptr) +i);
 }
 free(ptr);
 }
