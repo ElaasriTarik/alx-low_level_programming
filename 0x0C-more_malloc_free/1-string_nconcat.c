@@ -26,7 +26,8 @@ return (x);
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-int i = 0, ss = n;
+int i = 0;
+int ss = n;
 char *p;
 int b = 0;
 int length;
