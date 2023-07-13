@@ -6,8 +6,7 @@
 
 int *array_range(int min, int max)
 {
-int *arr;
-int length;
+int *arr, length;
 if (min > max)
 return (NULL);
 
@@ -18,7 +17,6 @@ return (NULL);
 
 while (min <= max)
 {
-printf("%d", min);
 arr[min] = min;
 min++;
 }
