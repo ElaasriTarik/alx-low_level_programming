@@ -22,7 +22,6 @@ return (NULL);
 
 while (min <= max)
 {
-printf("%d", min);
 arr[min] = min;
 min++;
 }
