@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 /**
  * _calloc - return an array of certain amount pointers
@@ -11,6 +12,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 if (nmemb == 0 || size == 0)
 return (NULL);
+
 void *pp;
 
 pp = (void *)malloc(nmemb * size);
