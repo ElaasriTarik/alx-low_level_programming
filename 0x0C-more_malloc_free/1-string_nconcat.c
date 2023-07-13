@@ -25,18 +25,19 @@ return (x);
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 char *p;
-int i = 0;
+int length, i = 0;
 int ss = n;
 int b = 0;
-int length;
 if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
 if (ss < 0)
 return (NULL);
+
 if (ss >= _len(s2))
 ss = _len(s2);
+
 length = _len(s1) + ss + 1;
 p = malloc(sizeof(char) * length);
 if (p == NULL)
