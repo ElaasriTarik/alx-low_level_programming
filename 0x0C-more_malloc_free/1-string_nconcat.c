@@ -35,12 +35,12 @@ if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
-if(ss == NULL)
+if(ss < 0)
 return (NULL);
 if (ss >= _len(s2))
 ss = _len(s2);
 
-length = _len(s1) + _len(s2);
+length = _len(s1) + ss + 1;
 printf("%d\n", length);
 p = malloc(sizeof(char) * length);
 if (p == NULL)
@@ -57,11 +57,6 @@ p[i] = *s2;
 i++;
 *s2++;
 b++;
-}
-while (*p)
-{
-printf("%c\n", *p);
-*p++;
 }
 return (p);
 }
