@@ -47,12 +47,13 @@ p[i] = *s1;
 i++;
 *s1++;
 }
-while (b <= ss)
+while (b < ss)
 {
 p[i] = *s2;
 i++;
 *s2++;
 b++;
 }
+p[i] = '\0';
 return (p);
 }
