@@ -44,7 +44,7 @@ res = malloc(a = d = xx1 + yy2);
 if (!res)
 printf("Error\n"), exit(98);
 while (a--)
-r[a] = 0;
+res[a] = 0;
 for (xx1--; xx1 >= 0; xx1--)
 {
 if (!check_digit(s1[xx1]))
@@ -62,12 +62,12 @@ free(res);
 printf("Error\n"), exit(98);
 }
 b = s2[yy2] - '0';
-c += r[xx1 + yy2 + 1] + (a * b);
-r[xx1 + yy2 + 1] = c % 10;
+c += res[xx1 + yy2 + 1] + (a * b);
+res[xx1 + yy2 + 1] = c % 10;
 c /= 10;
 }
 if (c)
-r[xx1 + yy2 + 1] += c;
+res[xx1 + yy2 + 1] += c;
 }
 return (res);
 }
@@ -82,19 +82,19 @@ return (res);
 int main(int *argc, char **argv[])
 {
 char *res;
-int a, b, d;
+int a, b, c;
 if (argc != 3)
 printf("Error\n"), exit(98);
-d = len(argv[1]) + len(argv[2]);
+c = len(argv[1]) + len(argv[2]);
 res = big_multiply(argv[1], argv[2]);
 b = 0;
 a = 0;
-while (b < d)
+while (b < c)
 {
-if (r[b])
+if (res[b])
 a = 1;
 if (a)
-_putchar(r[b] + '0');
+_putchar(res[b] + '0');
 b++;
 }
 if (!a)
