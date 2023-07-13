@@ -4,53 +4,50 @@
 #include <limits.h>
 #include <string.h>
 
-int _len(char *str)
+int _strlen(char *string)
 {
-int x = 0;
-for (; str[x] != '\0'; x++)
-;
-return (x);
+	int i;
+
+	for (i = 0; string[i] != '\0'; i++)
+		;
+	return (i);
 }
 /**
- * string_nconcat - function that concats two strings
- *@s1: string
- *@s2: string
- *@n: memory size
- * Return: (pointer)
-*/
+ * string_nconcat - concatenate s1 and n bytes of s2; return ptr to string
+ * @s1: string 1
+ * @s2: string 2
+ * @n: n bytes to concat from string 2
+ * Return: pointer to concatenated string
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-char *p;
-int length, ss, i;
-ss = n;
-i = 0;
-int b = 0;
-if (s1 == NULL)
-s1 = "";
-if (s2 == NULL)
-s2 = "";
-if (ss < 0)
-return (NULL);
+	char *ptr;
+	int num, len, i, j;
 
-if (ss >= _len(s2))
-ss = _len(s2);
+	num = n;
 
-length = _len(s1) + ss + 1;
-p = malloc(sizeof(char) * length);
+	if (s1 == NULL) /* account for NULL strings */
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	if (num < 0) /* account for negative n bytes */
+		return (NULL);
+	if (num >= _strlen(s2)) /* account for n too big */
+		num = _strlen(s2);
 
-if (p == NULL)
-return (NULL);
+	len = _strlen(s1) + num + 1; /* +1 to account for null pointer */
 
-for (; *s1 != '\0'; i++, *s1++)
-{
-p[i] = *s1;
-}
-for (; b < ss; i++, *s2++, b++)
-{
-p[i] = *s2;
-}
-p[i] = '\0';
-return (p);
+	ptr = malloc(sizeof(*ptr) * len); /* malloc and check for error */
+	if (ptr == NULL)
+		return (NULL);
+
+	for (i = 0; s1[i] != '\0'; i++) /* concat */
+		ptr[i] = s1[i];
+	for (j = 0; j < num; j++)
+		ptr[i + j] = s2[j];
+	ptr[i + j] = '\0';
+
+	return (ptr);
 }
 
 /**

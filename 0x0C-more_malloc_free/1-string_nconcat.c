@@ -11,14 +11,15 @@
 int _len(char *str)
 {
 int x;
-for (x = 0; str[x] != '\0'; x++)
+x = 0;
+for (; str[x] != '\0'; x++)
 ;
 return (x);
 }
 /**
  * string_nconcat - function that concats two strings
- *@s1: string
- *@s2: string
+ * @s1: string
+ * @s2: string
  *@n: memory size
  * Return: (pointer)
 */
