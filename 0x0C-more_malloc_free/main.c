@@ -1,53 +1,61 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 #include <string.h>
 
-int _strlen(char *string)
-{
-	int i;
 
-	for (i = 0; string[i] != '\0'; i++)
-		;
-	return (i);
+int *array_range(int min, int max)
+{
+int *arr, m;
+int length;
+m = min;
+if (min > max)
+return (NULL);
+
+length = max - min;
+arr = malloc(sizeof(int) * length);
+if (arr == NULL)
+return (NULL);
+
+while (m <= max)
+{
+printf("%d", m);
+arr[m] = m;
+m++;
 }
+
+return (arr);
+
+
+}
+
+
 /**
- * string_nconcat - concatenate s1 and n bytes of s2; return ptr to string
- * @s1: string 1
- * @s2: string 2
- * @n: n bytes to concat from string 2
- * Return: pointer to concatenated string
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
+ *
+ * Return: Nothing.
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void simple_print_buffer(int *buffer, unsigned int size)
 {
-	char *ptr;
-	int num, len, i, j;
+    unsigned int i;
 
-	num = n;
-
-	if (s1 == NULL) /* account for NULL strings */
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	if (num < 0) /* account for negative n bytes */
-		return (NULL);
-	if (num >= _strlen(s2)) /* account for n too big */
-		num = _strlen(s2);
-
-	len = _strlen(s1) + num + 1; /* +1 to account for null pointer */
-
-	ptr = malloc(sizeof(*ptr) * len); /* malloc and check for error */
-	if (ptr == NULL)
-		return (NULL);
-
-	for (i = 0; s1[i] != '\0'; i++) /* concat */
-		ptr[i] = s1[i];
-	for (j = 0; j < num; j++)
-		ptr[i + j] = s2[j];
-	ptr[i + j] = '\0';
-
-	return (ptr);
+    i = 0;
+    while (i < size)
+    {
+        if (i % 10)
+        {
+            printf(" ");
+        }
+        if (!(i % 10) && i)
+        {
+            printf("\n");
+        }
+        printf("0x%02x", buffer[i]);
+        i++;
+    }
+    printf("\n");
 }
 
 /**
@@ -57,10 +65,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
  */
 int main(void)
 {
-    char *concat;
+    int *a;
 
-    concat = string_nconcat("Best ", "School !!!", 6);
-    printf("%s\n", concat);
-    free(concat);
+    a = array_range(0, 10);
+    simple_print_buffer(a, 11);
+    free(a);
     return (0);
 }
