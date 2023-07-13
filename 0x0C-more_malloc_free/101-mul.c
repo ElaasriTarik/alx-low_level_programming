@@ -12,9 +12,15 @@
 
 int main(int *argc, char *argv[])
 {
-unsigned long int mul;
-unsigned long int n1 = atoi(argv[1]);
-unsigned long int n2 = atoi(argv[2]);
+unsigned long mul;
+if (argc != 3)
+{
+printf("Error\n");
+exit(98);
+}
+
+unsigned long n1 = atoi(argv[1]);
+unsigned long n2 = atoi(argv[2]);
 mul = n1 * n2;
 printf("%d\n",mul);
 return (0);
