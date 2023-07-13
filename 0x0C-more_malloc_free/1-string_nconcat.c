@@ -10,8 +10,8 @@
 
 int _len(char *str)
 {
-int x = 0;
-for (; str[x] != '\0'; x++)
+int x;
+for (x = 0; str[x] != '\0'; x++)
 ;
 return (x);
 }
@@ -24,9 +24,9 @@ return (x);
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+char *p;
 int i = 0;
 int ss = n;
-char *p;
 int b = 0;
 int length;
 if (s1 == NULL)
