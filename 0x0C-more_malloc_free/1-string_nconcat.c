@@ -14,6 +14,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 int i = 0;
 char *p;
+int b = 0;
 if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
@@ -23,15 +24,12 @@ printf("%d\n", length);
 p = malloc(sizeof(char) * length);
 if (p == NULL)
 return (NULL);
-
 while (*s1 != '\0')
 {
 p[i] = *s1;
 i++;
 *s1++;
 }
-int b = 0;
-int limit = n + 1;
 while (b <= n)
 {
 p[i] = *s2;
