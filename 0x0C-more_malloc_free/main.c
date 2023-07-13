@@ -20,35 +20,34 @@ return (x);
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-int i = 0;
-int ss = n;
 char *p;
+int length, ss, i;
+ss = n;
+i = 0;
 int b = 0;
-int length;
 if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
-if(ss < 0)
+if (ss < 0)
 return (NULL);
+
 if (ss >= _len(s2))
 ss = _len(s2);
+
 length = _len(s1) + ss + 1;
 p = malloc(sizeof(char) * length);
+
 if (p == NULL)
 return (NULL);
-while (*s1 != '\0')
+
+for (; *s1 != '\0'; i++, *s1++)
 {
 p[i] = *s1;
-i++;
-*s1++;
 }
-while (b < ss)
+for (; b < ss; i++, *s2++, b++)
 {
 p[i] = *s2;
-i++;
-*s2++;
-b++;
 }
 p[i] = '\0';
 return (p);

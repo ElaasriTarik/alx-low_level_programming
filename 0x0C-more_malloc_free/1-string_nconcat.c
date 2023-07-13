@@ -41,20 +41,17 @@ ss = _len(s2);
 
 length = _len(s1) + ss + 1;
 p = malloc(sizeof(char) * length);
+
 if (p == NULL)
 return (NULL);
-while (*s1 != '\0')
+
+for (; *s1 != '\0'; i++, *s1++)
 {
 p[i] = *s1;
-i++;
-*s1++;
 }
-while (b < ss)
+for (; b < ss; i++, *s2++, b++)
 {
 p[i] = *s2;
-i++;
-*s2++;
-b++;
 }
 p[i] = '\0';
 return (p);
