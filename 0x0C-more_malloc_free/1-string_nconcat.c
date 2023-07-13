@@ -26,10 +26,10 @@ return (x);
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 char *p;
-int length, ss, i;
+int length, ss, i, b;
 ss = n;
 i = 0;
-int b = 0;
+b = 0;
 if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
