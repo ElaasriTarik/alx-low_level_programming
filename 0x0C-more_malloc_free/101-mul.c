@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-
 /**
  * check_digit - checks if char is digit
  * @c: the character to check
@@ -12,7 +11,6 @@ int check_digit(int c)
 {
 return (c >= '0' && c <= '9');
 }
-
 /**
  * len - coungts the length of a string
  * @str: string
@@ -26,7 +24,6 @@ while (*str++)
 l++;
 return (l);
 }
-
 /**
  * big_multiply - multiply two big number strings
  * @s1: the first big number string
@@ -42,7 +39,10 @@ xx1 = len(s1);
 yy2 = len(s2);
 res = malloc(a = d = xx1 + yy2);
 if (!res)
-printf("Error\n"), exit(98);
+{
+printf("Error\n");
+exit(98);
+}
 while (a--)
 res[a] = 0;
 for (xx1--; xx1 >= 0; xx1--)
@@ -50,7 +50,8 @@ for (xx1--; xx1 >= 0; xx1--)
 if (!check_digit(s1[xx1]))
 {
 free(res);
-printf("Error\n"), exit(98);
+printf("Error\n");
+exit(98);
 }
 a = s1[xx1] - '0';
 c = 0;
@@ -62,7 +63,7 @@ free(res);
 printf("Error\n"), exit(98);
 }
 b = s2[yy2] - '0';
-c += res[xx1 + yy2 + 1] + (a * b);
+c += res[xx1 + yy2 + 1] + (a *b);
 res[xx1 + yy2 + 1] = c % 10;
 c /= 10;
 }
@@ -71,20 +72,21 @@ res[xx1 + yy2 + 1] += c;
 }
 return (res);
 }
-
 /**
  * main - return the multiplication of n1, n2.
- *@n1: int
- *@n2: int
+ *@argc: number of args passed
+ *@argv: argument array
  * Return: (0) Always
 */
-
-int main(int *argc, char **argv[])
+int main(int argc, char *argv[])
 {
 char *res;
 int a, b, c;
 if (argc != 3)
-printf("Error\n"), exit(98);
+{
+printf("Error\n");
+exit(98);
+}
 c = len(argv[1]) + len(argv[2]);
 res = big_multiply(argv[1], argv[2]);
 b = 0;
@@ -94,12 +96,12 @@ while (b < c)
 if (res[b])
 a = 1;
 if (a)
-_putchar(res[b] + '0');
+putchar(res[b] + '0');
 b++;
 }
 if (!a)
-_putchar('0');
-_putchar('\n');
+putchar('0');
+putchar('\n');
 free(res);
 return (0);
 }
