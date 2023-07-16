@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
 char *res;
 int a, b, c;
 if (argc != 3)
-{
+{ 
 printf("Error\n");
 exit(98);
 }
