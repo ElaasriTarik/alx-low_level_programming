@@ -10,12 +10,12 @@ if (d != NULL)
 if (d->name != NULL)
 printf("Name: %s\n", d->name);
 else
-printf("Name: (nil)");
+printf("Name: (nil)\n");
 
 if (d->age)
 printf("Age: %f\n", d->age);
 else
-printf("Age: 0");
+printf("Age: 0\n");
 
 if (d->owner != NULL)
 printf("Owner: %s", d->owner);
@@ -35,7 +35,7 @@ int main(void)
 
     my_dog.name = NULL;
     my_dog.age = 3.5;
-    my_dog.owner = "Bob";
+    my_dog.owner = NULL;
     print_dog(&my_dog);
     return (0);
 }
