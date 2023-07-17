@@ -16,7 +16,7 @@ if (d != NULL)
 if (d->name)
 printf("Name: %s\n", d->name);
 else
-printf("(nil)");
+printf("Name: (nil)");
 if (d->age)
 printf("Age: %f\n", d->age);
 else
@@ -24,6 +24,6 @@ printf("0");
 if (d->owner)
 printf("Owner: %s", d->owner);
 else
-printf("(nil)");
+printf("Owner: (nil)");
 }
 }
