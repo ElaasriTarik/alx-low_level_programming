@@ -17,10 +17,12 @@ if (d->name != NULL)
 printf("Name: %s\n", d->name);
 else
 printf("Name: (nil)");
-if (d->age)
+
+if (d->age != NULL)
 printf("Age: %f\n", d->age);
 else
 printf("Age: 0");
+
 if (d->owner != NULL)
 printf("Owner: %s", d->owner);
 else
