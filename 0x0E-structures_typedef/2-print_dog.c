@@ -20,7 +20,7 @@ printf("Name: (nil)");
 if (d->age)
 printf("Age: %f\n", d->age);
 else
-printf("0");
+printf("Age: 0");
 if (d->owner != NULL)
 printf("Owner: %s", d->owner);
 else
