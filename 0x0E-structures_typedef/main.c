@@ -5,6 +5,7 @@
 
 void print_dog(struct dog *d)
 {
+printf("0");
 if (d != NULL)
 	{
 		if (d->name)
