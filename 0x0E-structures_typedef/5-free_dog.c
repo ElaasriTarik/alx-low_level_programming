@@ -5,13 +5,13 @@
 /**
  * free_dog - frees a dog
  * @d: struct dog variable
- *
  * Return: Nothing (success)
  */
 
 void free_dog(dog_t *d)
 {
-if (d) {
+if (d)
+{
 free(d);
 d = NULL;
 }
