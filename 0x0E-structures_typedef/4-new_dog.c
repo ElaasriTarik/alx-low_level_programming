@@ -26,13 +26,13 @@ ownerlen = len(owner) + 1;
 dd = malloc(sizeof(dog_t));
 if (dd == NULL)
 return (NULL);
-dd->name = malloc(sizeof(char) *namelen);
+dd->name = malloc(sizeof(char) * namelen);
 if (dd->name == NULL)
 {
 free(dd->name);
 return (NULL);
 }
-dd->owner = malloc(sizeof(char) *ownerlen);
+dd->owner = malloc(sizeof(char) * ownerlen);
 if (dd->owner == NULL)
 {
 free(dd->name);
@@ -61,7 +61,7 @@ return (x);
 }
 /**
  * char_copy - to copy a string
- * @dest: Destination value
+ * @des: Destination value
  * @src: Source value
  * Return: the pointer to dest
  */
