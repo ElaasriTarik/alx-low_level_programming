@@ -1,12 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 
 
-void init_dog(struct dog *d, char *name, float age, char *owner)
+void print_dog(struct dog *d)
 {
-d->name = name;
-d->age = age;
-d->owner = owner;
+if (d != NULL)
+	{
+		if (d->name)
+        printf("Name: %s\n", d->name);
+        else
+        printf("(nil)");
+        if (d->age)
+        printf("Age: %f\n", d->age);
+        else
+        printf(0);
+        if (d->owner)
+        printf("Owner: %s", d->owner);
+        else
+        printf("(nil)");
+	}
 }
 /**
  * main - check the code
@@ -17,7 +30,9 @@ int main(void)
 {
     struct dog my_dog;
 
-    init_dog(&my_dog, "Poppy", 3.5, "Bob");
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
+    my_dog.name = "Poppy";
+    my_dog.age = 3.5;
+    my_dog.owner = "Bob";
+    print_dog(&my_dog);
     return (0);
 }
