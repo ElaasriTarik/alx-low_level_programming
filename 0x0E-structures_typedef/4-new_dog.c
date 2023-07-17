@@ -2,8 +2,17 @@
 #include <stdlib.h>
 #include "dog.h"
 
+
 int len(char *c);
 char *_cpy(char *des, char *src);
+
+/**
+ * new_dog - creates a copy of name and owner
+ * @name: name of dog
+ * @age: age
+ * @owner: owner
+ * Return: new struct
+ */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -73,17 +82,3 @@ des[x] = '\0';
 printf("%s", des);
 return (des);
 } 
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    dog_t *my_dog;
-
-    my_dog = new_dog("Poppy", 3.5, "Bob");
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
-    return (0);
-}
