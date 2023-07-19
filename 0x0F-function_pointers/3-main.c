@@ -20,18 +20,15 @@ return (atoi(a));
 
 int main(int argc, char *argv[])
 {
-int num1;
-int num2;
+
 int (*func)(int, int);
 
-if (argc > 4)
+if (argc != 4)
 {
 printf("Error\n");
 exit(98);
 }
-    
-num1 = to_int(argv[1]);
-num2 = to_int(argv[3]);
+
 func = get_op_func(argv[2]);
 
 if (!func)
@@ -39,8 +36,8 @@ if (!func)
 printf("Error\n");
 exit(99);
 }
-    
-printf("%d\n", func(num1, num2));
-    
+
+printf("%d\n", func(to_int(argv[1]), to_int(argv[3])));
+
 return (0);
 }
