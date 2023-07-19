@@ -1,6 +1,7 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <string.h>
+#include "3-calc.h"
 /**
  * to_int - converts to int
  *@a: char to convert
