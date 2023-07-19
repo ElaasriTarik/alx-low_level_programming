@@ -6,11 +6,12 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 int x = 0;
 if (array == NULL || action == NULL)
-exit(3);
+return (0);
 
-for (; x < (int) size; x++)
+while (x < (int)size)
 {
 action(array[x]);
+x++;
 }
 }
 /**
