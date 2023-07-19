@@ -1,9 +1,7 @@
 #include "function_pointers.h"
 #include <stdio.h>
-#include <stdlib.h>
-
 /**
- * print_name - prints a name
+ * array_iterator - prints a name
  *@size: size of the array
  *@array: array
  *@action: function to call
