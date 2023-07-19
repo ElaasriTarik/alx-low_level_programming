@@ -5,7 +5,7 @@
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 unsigned int x;
-if (array && action || size)
+if (array && action)
 for (x = 0; x < size; x++)
 action(array[x]);
 }
