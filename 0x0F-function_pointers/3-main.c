@@ -2,15 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "3-calc.h"
-/**
- * to_int - converts to int
- *@a: char to convert
-*/
-
-int to_int(char *a)
-{
-return (atoi(a));
-}
 
 /**
  * main - check the code
@@ -37,7 +28,7 @@ printf("Error\n");
 exit(99);
 }
 
-printf("%d\n", func(to_int(argv[1]), to_int(argv[3])));
+printf("%d\n", func(atoi(argv[1]), atoi(argv[3])));
 
 return (0);
 }
