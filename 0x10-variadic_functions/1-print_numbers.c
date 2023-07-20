@@ -27,7 +27,7 @@ putchar(x + '0');
 }
 else
 print_val(x);
-if ((a < n -1) && separator != NULL)
+if ((a < n - 1) && separator != NULL)
 {
 putchar(*separator);
 putchar(' ');
@@ -41,9 +41,11 @@ putchar('\n');
  * Return: (Success)
  *
 */
-void print_val(int d) {
-   if(d != 0) {
-      print_val(d/10);
-      putchar((d%10) + '0');
-   }
+void print_val(int d)
+{
+if(d != 0)
+{
+print_val(d / 10);
+putchar((d % 10) + '0');
+}
 }
