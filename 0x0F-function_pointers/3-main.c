@@ -16,7 +16,7 @@ int (*func)(int, int);
 
 if (argc != 4)
 {
-printf("Error\n");
+printf("out of bound Error\n");
 exit(98);
 }
 
@@ -24,7 +24,7 @@ func = get_op_func(argv[2]);
 
 if (!func)
 {
-printf("Error\n");
+printf("this Error\n");
 exit(99);
 }
 

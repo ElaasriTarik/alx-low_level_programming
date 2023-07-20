@@ -2,6 +2,7 @@
 #include "3-calc.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
 /**
  * get_op_func - function that gets the correct operator
  * @s: the operator passed as argument
