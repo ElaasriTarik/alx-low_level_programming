@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 
-void print_val(int d);
-
 /**
  * print_numbers - a function to sum all args
  * @n: number of args
@@ -35,6 +33,7 @@ putchar(*separator);
 putchar(' ');
 }
 }
+putchar('\n');
 }
 /**
  * print_val - prints values
