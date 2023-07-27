@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * print_list - singly linked list
+ * list_len - singly linked list
  * @h: pointer to list
  *
  *Return: number of nodes.
