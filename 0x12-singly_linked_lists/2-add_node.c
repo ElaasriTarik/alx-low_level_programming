@@ -18,9 +18,9 @@ list_t *new_node = malloc(sizeof(list_t));
 if (new_node == NULL)
 return (NULL);
 
-for (; *str; x++, *str++)
+for (; str[x] != '\0'; x++)
 ;
-
+printf("%d\n", x);
 
 new_node->str = dup;
 new_node->len = x;
