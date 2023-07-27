@@ -28,6 +28,6 @@ new_node->len = x;
 new_node->next = (*head);
 (*head) = new_node;
 
-return (new_node->next);
+return ((*head));
 
 }
