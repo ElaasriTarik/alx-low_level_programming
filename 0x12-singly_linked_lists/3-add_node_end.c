@@ -36,7 +36,8 @@ return ((*head));
 }
 /** last node*/
 curr = *head;
-while (curr->next != NULL) {
+while (curr->next != NULL)
+{
 curr = curr->next;
 }
 curr->next = new_node;
