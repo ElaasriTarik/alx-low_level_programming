@@ -17,10 +17,9 @@ void free_list(list_t *head)
 list_t* curr = head;
 list_t* next;
 
-    while (!curr) {
-        next = curr->next;
-        free(curr);
-        curr = next;
-    }
-head = NULL;
+while (!curr) {
+next = curr->next;
+free(curr);
+curr = next;
+}
 }
