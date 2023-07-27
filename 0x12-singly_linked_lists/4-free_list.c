@@ -4,9 +4,8 @@
 #include "lists.h"
 
 /**
- * add_node_end - adds a new node at the end of list
+ * free_list - frees a list of nodes
  * @head: head of list
- * @str: string
  *
  *Return: number of nodes.
  */
@@ -16,7 +15,8 @@ void free_list(list_t *head)
 
 list_t* next;
 
-while (head != NULL) {
+while (head != NULL)
+{
 next = head->next;
 free(head->str);
 
