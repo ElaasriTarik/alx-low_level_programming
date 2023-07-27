@@ -7,13 +7,13 @@
  * free_list - frees a list of nodes
  * @head: head of list
  *
- *Return: number of nodes.
+ *Return: (Success)
  */
 
 void free_list(list_t *head)
 {
 
-list_t* next;
+list_t *next;
 
 while (head != NULL)
 {
