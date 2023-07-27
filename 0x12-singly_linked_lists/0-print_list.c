@@ -14,12 +14,12 @@ size_t x = 0;
 
 while (h != NULL)
 {
-    if (h->str == NULL)
-    printf("[0] (nil)\n");
-    else
-    printf("[%u] [%s]\n", h->len, h->str);
-    h = h->next;
-    x++;
+if (h->str == NULL)
+printf("[0] (nil)\n");
+else
+printf("[%u] [%s]\n", h->len, h->str);
+h = h->next;
+x++;
 }
 return (x);
 
