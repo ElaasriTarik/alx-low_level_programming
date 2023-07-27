@@ -19,7 +19,6 @@ return (NULL);
 
 for (; str[x] != '\0'; x++)
 ;
-printf("%d\n", x);
 
 new_node->str = strdup(str);
 new_node->len = x;
