@@ -1,0 +1,1 @@
+nore singly linked lists.
