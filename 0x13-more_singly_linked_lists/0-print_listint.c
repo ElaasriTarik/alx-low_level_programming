@@ -12,9 +12,6 @@ size_t x = 0;
 
 while (h != NULL)
 {
-if (!h->n)
-printf("[0] (nil)\n");
-else
 printf("%d\n", h->n);
 h = h->next;
 x++;
