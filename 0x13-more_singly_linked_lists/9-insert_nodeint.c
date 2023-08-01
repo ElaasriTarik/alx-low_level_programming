@@ -16,8 +16,6 @@ listint_t *new_node;
 listint_t *curr = (*head);
 if (*head == NULL && idx != 0)
 return (NULL);
-if ((*head) == NULL)
-return (NULL);
 
 while (curr && x < idx -1)
 {
