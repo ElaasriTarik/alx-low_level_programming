@@ -17,7 +17,7 @@ while (head)
 d = head - head->next;
 x++;
 printf("[%p] %d\n", (void *)head, head->n);
-if (d < 0)
+if (d > 0)
 head = head->next;
 else
 {
