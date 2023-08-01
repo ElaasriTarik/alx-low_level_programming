@@ -19,11 +19,13 @@ dd = *h - (*h)->next;
 if (dd > 0)
 {
 temp = (*h)->next;
+free(*h);
 *h = temp;
 x++;
 }
 else
 {
+free(*h);
 *h = NULL;
 x++;
 break;
