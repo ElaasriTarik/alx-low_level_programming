@@ -11,19 +11,19 @@ size_t print_listint_safe(const listint_t *head)
 size_t x = 0;
 long int d;
 
-while (!head)
+while (head)
 {
 
 d = head - head->next;
 x++;
 printf("[%p] %d\n", (void *)head, head->n);
-if (d > 0)
-head = head->next;
-else
+if (d < 0)
 {
 printf("-> [%p] %d\n", (void *)head->next, head->next->n);
 break;
 }
+else
+head = head->next;
 
 }
 
