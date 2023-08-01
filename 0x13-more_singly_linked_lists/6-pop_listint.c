@@ -19,7 +19,8 @@ while (!temp->next)
 temp2 = temp;
 temp = temp->next;
 }
-
+temp2->next = NULL;
+temp = NULL;
 return (temp2->n);
 
 }
