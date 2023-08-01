@@ -13,8 +13,7 @@ long int d;
 
 while (head != NULL)
 {
-if (!head)
-exit(98);
+
 d = head - head->next;
 x++;
 printf("[%p] %d\n", (void *)head, head->n);
