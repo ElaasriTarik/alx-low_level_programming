@@ -18,12 +18,12 @@ d = head - head->next;
 x++;
 printf("[%p] %d\n", (void *)head, head->n);
 if (d < 0)
+head = head->next;
+else
 {
 printf("-> [%p] %d\n", (void *)head->next, head->next->n);
 break;
 }
-else
-head = head->next;
 
 }
 
