@@ -39,5 +39,5 @@ new_node->n = n;
 new_node->next = curr->next;
 curr->next = new_node;
 
-return (new_node);
+return (curr->next);
 }
