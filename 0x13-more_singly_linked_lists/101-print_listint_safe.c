@@ -10,11 +10,11 @@ size_t print_listint_safe(const listint_t *head)
 {
 size_t x = 0;
 long int d;
-if (!head)
-exit (98);
 
 while (head != NULL)
 {
+if (!head)
+exit (98);
 d = head - head->next;
 x++;
 printf("[%p] %d\n", (void *)head, head->n);
@@ -25,6 +25,7 @@ else
 printf("-> [%p] %d\n", (void *)head->next, head->next->n);
 break;
 }
+
 }
 
 return (x);
