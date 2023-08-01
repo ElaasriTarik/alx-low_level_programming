@@ -24,13 +24,13 @@ while (curr && x < idx -1)
 curr = curr->next;
 x++;
 }
-
 if (curr == NULL)
 return (NULL);
+}
 
 new_node = malloc(sizeof (listint_t));
 new_node->n = n;
-}
+
 if (idx == 0)
 {
 new_node->next = (*head);
