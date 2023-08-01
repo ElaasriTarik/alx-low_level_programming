@@ -10,7 +10,7 @@ size_t x = 0;
 listint_t *temp;
 int dd;
 
-if (!h || !*h)
+if (h == NULL || *h == NULL)
 return (0);
 
 while (*h != NULL)
