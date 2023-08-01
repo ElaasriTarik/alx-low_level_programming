@@ -15,6 +15,8 @@ unsigned int x = 0;
 listint_t *new = malloc(sizeof (listint_t));
 listint_t *new_node;
 listint_t *curr = (*head);
+if (*head == NULL && idx != 0)
+return (NULL);
 if ((*head) == NULL)
 return (NULL);
 
