@@ -8,19 +8,19 @@
 
 int pop_listint(listint_t **head)
 {
-listint_t *temp2 = *head;
 listint_t *temp = *head;
+listint_t *temp2 = *head;
 /** chech if list is empty*/
 if ((*head) == NULL)
 return (0);
 
-while (!temp->next)
+while (temp->next)
 {
 temp2 = temp;
 temp = temp->next;
 }
 temp2->next = NULL;
-temp = NULL;
+
 return (temp2->n);
 
 }
