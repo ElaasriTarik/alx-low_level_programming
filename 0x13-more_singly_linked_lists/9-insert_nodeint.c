@@ -34,7 +34,6 @@ new_node->n = n;
 if (idx == 0)
 {
 new_node->next = (*head);
-new_node->n = n;
 (*head) = new_node;
 return (new_node);
 }
