@@ -17,6 +17,8 @@ listint_t *curr = (*head);
 if (*head == NULL && idx != 0)
 return (NULL);
 
+if(idx != 0)
+{
 while (curr && x < idx -1)
 {
 curr = curr->next;
@@ -28,7 +30,7 @@ return (NULL);
 
 new_node = malloc(sizeof (listint_t));
 new_node->n = n;
-
+}
 if (idx == 0)
 {
 new_node->next = (*head);
