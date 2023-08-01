@@ -10,7 +10,6 @@ int pop_listint(listint_t **head)
 {
 listint_t *temp;
 int dt;
-/** chech if list is empty*/
 if ((*head) == NULL)
 return (0);
 
