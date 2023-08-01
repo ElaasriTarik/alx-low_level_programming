@@ -1,10 +1,9 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - adds a new node at the end of list
+ * delete_nodeint_at_index - adds a new node at the end of list
  * @head: head of list
  * @index: index
- * @n: value to add
  *Return: head value.
  */
 
