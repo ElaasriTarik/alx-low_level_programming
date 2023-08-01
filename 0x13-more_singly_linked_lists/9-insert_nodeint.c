@@ -43,5 +43,5 @@ new_node->next = curr->next;
 curr->next = new_node;
 }
 
-return (curr->next);
+return (new_node->next);
 }
