@@ -3,12 +3,12 @@
 /**
  * insert_nodeint_at_index - adds a new node at the end of list
  * @head: head of list
- * @idx: index
+ * @index: index
  * @n: value to add
  *Return: head value.
  */
 
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 listint_t* temp;
 listint_t* curr = *head;
@@ -18,14 +18,14 @@ if (*head == NULL)
 {
 return (-1);
 }
-if (idx == 0) {
+if (index == 0) {
 temp = *head;
 *head = (*head)->next;
 free(temp);
 return (1);
 }
 
-while (x <idx && curr != NULL)
+while (x <index && curr != NULL)
 {
 prev = curr;
 curr = curr->next;
