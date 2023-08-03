@@ -18,7 +18,7 @@ return (0);
 
 while (cc[x] != '\0')
 {
-if (!(cc[x] >= 48 && cc[x] <= 57))
+if (!(cc[x] >= 48 && cc[x] <= 57) || !cc[x])
 return (0);
 bc = cc[x] - '0';
 rInt += bc *_pow(2, len);
