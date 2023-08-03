@@ -9,10 +9,13 @@ int _pow(int d, int x);
 */
 unsigned int binary_to_uint(const char *b)
 {
-int rInt = 0, len, x = 0;
+int rInt = 0, len, x = 0, i = 0;
 char bc;
 char *cc = strdup(b);
-len = strlen(cc) - 1;
+for (; cc[i] != '\0' ; i++)
+;
+
+len = i - 1;
 if (!b)
 return (0);
 
@@ -27,6 +30,7 @@ x++;
 }
 return (rInt);
 }
+
 /**
  * b_pow - powers a number
  *@x: to the power of
