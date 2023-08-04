@@ -17,5 +17,5 @@ x = compare & 1;
 count += x;
 compare >>= 1;
 }
-return count;
+return (count);
 }
