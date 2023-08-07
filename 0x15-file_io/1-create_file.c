@@ -3,7 +3,7 @@
 /**
  * create_file - create text file
  *@filename: the file name
- *@text-content: content
+ *@text_content: content
  * Return: (Success)
 */
 int create_file(const char *filename, char *text_content)
