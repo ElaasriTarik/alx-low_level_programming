@@ -13,13 +13,13 @@ int fd, wBytes, count = 0;
 if (filename == NULL)
 return (-1);
 
+fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
+if (fd == -1)
+return (-1);
+
 if (text_content)
 while (text_content[count])
 count++;
-
-fd = open(filename, O_WRONLY | O_APPEND);
-if (fd == -1)
-return (-1);
 
 wBytes = write(fd, text_content, count);
 if (wBytes != count)
@@ -27,4 +27,5 @@ return (-1);
 
 close(fd);
 return (1);
+
 }
