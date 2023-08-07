@@ -15,10 +15,10 @@ return (-1);
 
 if (text_content == NULL)
 {
-fd = open("filaname", O_RDWR | O_CREAT | S_IRUSR | S_IWUSR);
+fd = open(filename, O_RDWR | O_CREAT | S_IRUSR | S_IWUSR);
 }
 
-fd = open("filaname", O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 if (fd == -1)
 return (-1);
 while (text_content != NULL)
