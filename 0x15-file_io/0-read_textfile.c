@@ -19,17 +19,17 @@ return (0);
 
 fp = fopen(filename, "r");
 if (fp == NULL)
-return 0;
+return (0);
 
 buff = (char *)malloc(letters + 1);
 if (buff == NULL)
-return 0;
+return (0);
 
 rBytes = fread(buff, sizeof(char), letters, fp);
 if (rBytes < 0)
 {
 free(buff);
-return 0;
+return (0);
 }
 
 fclose(fp);
