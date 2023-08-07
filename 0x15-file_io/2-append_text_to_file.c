@@ -12,7 +12,7 @@ int count = 0;
 int fp;
 ssize_t wBytes;
 
-if(filename == NULL)
+if (filename == NULL)
 return (-1);
 
 fp = open(filename, O_WRONLY | O_APPEND);
