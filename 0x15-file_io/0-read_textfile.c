@@ -43,4 +43,5 @@ free(buff);
 return (0);
 }
 
+return (wBytes);
 }
