@@ -22,11 +22,11 @@ if (text_content)
 {
 while (text_content[count])
 count++;
-
-wBytes = write(fd, text_content, count);
-if (wBytes != count)
-return (-1);
 }
+wBytes = write(fd, text_content, count);
+if (wBytes -= -1)
+return (-1);
+
 
 close(fd);
 return (1);
