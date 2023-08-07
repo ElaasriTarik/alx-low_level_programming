@@ -8,28 +8,24 @@
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
-int count = 0;
-int fp;
-ssize_t wBytes;
+int fd, wBytes, count = 0;
 
 if (filename == NULL)
 return (-1);
 
-fp = open(filename, O_WRONLY | O_APPEND);
-if (fp == -1)
-return (-1);
-
+if (text_content)
 while (text_content[count])
 count++;
 
-if (text_content)
-{
-wBytes = write(fp, text_content, count);
-if (wBytes == -1)
+fd = open(filename, O_WRONLY | O_APPEND);
+if (fd == -1)
 return (-1);
-}
 
-close(fp);
+wBytes = write(fd, text_content, count);
+if (wBytes != count)
+return (-1);
+
+close(fd);
 return (1);
 
 }

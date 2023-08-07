@@ -8,25 +8,22 @@
 */
 int create_file(const char *filename, char *text_content)
 {
-int fd, count;
-ssize_t wBytes;
+int fd, wBytes, count = 0;
 
 if (filename == NULL)
 return (-1);
 
-fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+if (text_content)
+while (text_content[count])
+count++;
+
+fd = open(filename, O_WRONLY | O_APPEND);
 if (fd == -1)
 return (-1);
 
-if (text_content)
-{
-while (text_content[count])
-count++;
-}
 wBytes = write(fd, text_content, count);
-if (wBytes == -1)
+if (wBytes != count)
 return (-1);
-
 
 close(fd);
 return (1);
