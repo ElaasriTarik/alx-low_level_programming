@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * get_dnodeint - gets a node
+ * get_dnodeint_at_index - gets a node
  * @head: head of list
  * @index: index of the node
  * Return: Success
@@ -24,5 +24,5 @@ return (curr);
 curr = curr->next;
 x++;
 }
- return (NULL);
+return (NULL);
 }
