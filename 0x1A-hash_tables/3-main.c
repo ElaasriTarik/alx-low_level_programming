@@ -3,22 +3,6 @@
 #include <stdio.h>
 #include "hash_tables.h"
 
-void hash_table_print(hash_table_t* table)
-{
-	unsigned long int i = 0;
-    printf("\nHash Table\n-------------------\n");
-
-    for (; i < table->size; i++)
-    {
-        if (table->array[i])
-        {
-            printf("Index:%ld, Key:%s, Value:%s\n", i, table->array[i] -> key, table->array[i]->value);
-        }
-    }
-
-    printf("-------------------\n\n");
-}
-
 /**
  * main - check the code
  *
