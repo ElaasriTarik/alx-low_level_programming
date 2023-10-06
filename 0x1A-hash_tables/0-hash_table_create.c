@@ -14,7 +14,10 @@ hash_table_t *table = (hash_table_t *)malloc(sizeof(hash_table_t));
 table->size = size;
 
 if (table == NULL)
+{
+free(table);
 return (NULL);
+}
 
 return (table);
 }
