@@ -9,6 +9,7 @@ def island_perimeter(grid):
     ix = 0
     total = 0
     for x in range(len(grid)):
+        ix = 0
         for ix in range(len(grid[x])):
             if grid[x][ix] == 1:
                 prev = x - 1
