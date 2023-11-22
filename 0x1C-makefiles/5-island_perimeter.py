@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+''' finding an iland's perimeter '''
+
 
 def island_perimeter(grid):
     x = 0
