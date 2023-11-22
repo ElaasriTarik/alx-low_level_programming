@@ -3,20 +3,19 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
-EMACS_TEMP= *~ \#*\# *.swp
-VIM_TEMP = *.swp *.swo
+_TEMP= *~ 
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) $(EMACS_TEMP) $(VIM_TEMP)
+	$(RM) $(_TEMP) $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
 
 fclean:
-	$(RM) $(NAME) $(OBJ)$(EMACS_TEMP) $(VIM_TEMP)
+	$(RM) $(NAME) $(OBJ)$(_TEMP)
 
 re:
 	oclean all
