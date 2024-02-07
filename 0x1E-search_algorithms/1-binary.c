@@ -30,10 +30,11 @@ int search(size_t l, size_t r, int *array, int value)
 {
 	size_t left = l;
 	size_t right = r;
-	size_t i = l;
-	size_t mid = left + (right - left) / 2;
 
-	if (left > right || !array)
+	size_t mid = l + (r - l) / 2;
+	size_t i = l;
+	printf("left [%ld] right [%ld] mid [%ld] \n", left, right, mid);
+	if (left > right || !array || (r - l == 0 && array[l]))
 		return (-1);
 
 	printf("Searching in array: ");
