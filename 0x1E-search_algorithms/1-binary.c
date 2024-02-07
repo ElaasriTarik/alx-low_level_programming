@@ -4,33 +4,51 @@
 #include <math.h>
 #include "search_algos.h"
 
+/**
+ * binary_search - function to search for values binary
+ * @array: array of the value
+ * @size: size of the array
+ * @value: value to searc for
+ * Return: result index or -1 if not found
+ */
+
 int binary_search(int *array, size_t size, int value)
 {
-  return search(0, size, array, value);
+	return (search(0, size, array, value));
 }
 
-int search(int l, int r, int *array, int value)
+/**
+ * search - function to search for values recursivly
+ * @array: array of the value
+ * @l: left index
+ * @r: right index
+ * @value: value to searc for
+ * Return: result index or -1 if not found
+ */
+
+int search(size_t l, size_t r, int *array, int value)
 {
-  int left = l;
-  int right = r;
-  int mid = floor((right + left) / 2);
+	size_t left = l;
+	size_t right = r;
+	size_t i = l;
+	size_t mid = left + (right - left) / 2;
 
-  printf("Searching in array: ");
-  for (; l < r; l++)
-    {
-    printf("%d", array[l]);
-    if (l + 1 < r)
-      printf(", ");
-    }
-  printf("\n");
+	if (left > right || !array)
+		return (-1);
 
-  if (left > right || !array)
-    return (-1);
-  
-  if (value == array[mid])
-    return (mid);
-  else if (value < array[mid])
-    return search(left, mid - 1, array, value);
-  else
-    return search(mid + 1, right, array, value);
+	printf("Searching in array: ");
+	for (; i < r; i++)
+	{
+		printf("%d", array[i]);
+		if (i + 1 < r)
+			printf(", ");
+	}
+	printf("\n");
+
+	if (value == array[mid])
+		return (mid);
+	else if (value < array[mid])
+		return (search(left, mid - 1, array, value));
+	else
+		return (search(mid + 1, right, array, value));
 }
